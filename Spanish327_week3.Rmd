@@ -1,0 +1,240 @@
+---
+title: "Láminas para Español 327"
+subtitle: "Semester de otoño<br/>2021"
+author: "Erwin Lares"
+institute: "Departmen of Spanish & Portuguese <br/>UW-Madison"
+date: "2021/08/30 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, default, middlebury-fonts]
+    lib_dir: libs
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      countdown: 60000
+---
+
+```{r setup, include=FALSE, echo = FALSE, message=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3,
+                      fig.width = 7,
+                      fig.height = 5)
+
+library(tidyverse)
+library(skimr)
+library(ggwordcloud)
+library(knitr)
+library(xaringanBuilder)
+library(googledrive)
+
+```
+name: agenda
+#### Lunes 13 de septiembre de 2021 
+# Semana 2
+
+- ¿Preguntas?
+- ¿Alguien que quiera compartir algo que aprendió la semana pasada?
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | Morfología
+
+```{r, echo = FALSE, eval = FALSE}
+include_graphics("images/words_tipoftheiceberg.png")
+```
+
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | ¿Cuántas palabras hay?
+
+comer, lápiz, auto, ordenar, ordenador, autobús, coche-cama, dáselo, lavaplatos, comiendo, se lo doy, pendiente, cierrabares dibujo, dependiente, salero, independiente
+--
+
+1. Fragmento de escritura que se encuentra entre dos espacios tipográficos.
+
+1. Asociación estable de forma y significado.
+
+1. Signo lingüístico que puede funcionar de manera independiente.
+
+1. Signo lingüístico que puede usarse en contextos sintácticos diferentes.
+
+1. Signo lingüístico cuyos componentes internos no pueden separarse ni reordenarse.
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | Estructura de la palabra
+
+```{r, echo = FALSE, eval = FALSE}
+include_graphics("images/estructura_de_la_palabra.png")
+
+```
+
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | ¿Son sustantivos, adjetivos, verbos o preposiciones?
+
+- **Trajeron** el carro nuevo. 
+
+- Caminaba a la **escuela**. 
+
+- El soldado disparó al **último** prisionero. 
+
+- Puse el libro en un **sobre** azul. 
+
+- El policía arrestó a los ladrones del **banco** pequeño. 
+
+- La pierna **débil** es la izquierda 
+
+- Nos **visita** de vez en cuando 
+
+- Puse el libro **sobre** la mesa 
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | ¿Son sustantivos, adjetivos, verbos o preposiciones?
+
+- Es difícil que **entre** todo en el carro. 
+
+- Estaba **entre** la espada y la pared. 
+
+- Sin duda era un **gran** orador. 
+
+- Está **enamorado** de Rocío, no de Isabel. 
+
+- Nuestros **antepasados** eran muy sabios. 
+
+- Se dirigían **hacia** la estación. 
+
+- Tus amigos han **llegado** a tiempo. 
+
+- Su **enamorado** es muy guapo. 
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | ¿De qué categoria léxica se trata?
+
+1. **Mataron** al rehén.
+
+--
+
+1. Estaba **enferma**.
+
+--
+
+1. El cine **o** el teatro.
+
+--
+
+1. Quiere el libro **azul**.
+
+--
+
+1. Duerme **como** un bebé.
+
+--
+
+1. Le gustan **los** chocolates.
+
+--
+
+1. Vénde**me**los.
+
+--
+
+1. El **presidente**.
+
+--
+
+1. **Lo** trajo ayer.
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | ¿De qué categoria léxica se trata?
+
+10. Es **mío**.
+
+--
+
+1. Preparó **nuestra** comida.
+
+--
+
+1. Me lo dio **para** ti.
+
+--
+
+1. **Éste** no es bueno.
+
+--
+
+1. **Esa** mujer.
+
+--
+
+1. **Mañana** te llama.
+
+--
+
+1. Me **dijo** que vendría.
+
+--
+
+1. ¿**Quién** será?
+
+--
+
+1. Llegó **un** hombre
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | Divida las palabras identificando la raíz y los afijos
+
+- mar | mares | marino | marineros | marítimo
+- casa | casita | casona | casero | casucha
+- nación | nacional | antinacional | antinacionalismo
+- político | política | politicamente 
+
+---
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | ¿Cuántos morfemas puede identificar?
+
+1. canten
+1. aburrir
+1. amado
+1. grandísimo
+1. azul
+1. gato
+1. salar
+1. abuelito
+
+--- 
+#### Semana 2 | Lunes 13 de septiembre de 2021 
+## Actividad | ¿Cuántos morfemas puede identificar?
+
+9. véndemelo 
+1. mexicano
+1. Rosita
+1. rosado
+1. sol
+1. tradicional 
+1. bebo
+
+
+<!-- Run this to upload this to GoogleDrive -->
+```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
+
+#build_pdf("spanish327_slides.html", complex_slides = TRUE)
+# If you want to build a new slide for each increment on incremental slides, set partial_slides = TRUE.
+#this method work, but plots will not render 
+#Docker HAS TO BE RUNNING FOR THIS TO WORKx
+
+xaringan::decktape("327_slides.html", output = "week2_327.pdf")
+slides <- drive_put("week2_327.pdf", path = "Fall_2021/week2_327.pdf")
+slides <- slides %>%
+   drive_share(role = "reader", type = "anyone")
+
+```
