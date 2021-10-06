@@ -30,50 +30,81 @@ library(googledrive)
 
 ```
 name: agenda
-#### Lunes 27 al viernes 1º de octubre de 2021 
-# Semana 4
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5
 
 Carpintería administrativa
 
-- presentaciones
-- lista de conceptos
-- formato de los exámenes
-- pedagogía
+- examen parcial 1
+- asistencia y participación
+- nueva unidad
 
 ---
-#### Semana 4 - Lunes 27 al viernes 1º de octubre de 2021 
-# Actividad | Jerarquía y núcleo de compuestos N + N -> N
-#### .center[hombre rana]
-#### .center[perro lobo]
-#### .center[falda pantalón]
-#### .center[...]
-#### .center[ciencia ficción]
-#### .center[compraventa]
-#### .center[telaraña]
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - Macro objetivos 
 
-???
-significado
-el núcleo
-la pluralización
+- ¿Cómo se describen y clasifican los sintagmas?
+- ¿Cuál es la estructura básica universad de los constituyentes?
+- ¿Cuáles son las reglas que nos permiten combinar sintagmas?
+- ¿De qué manera las reglas nos permiten definir relaciones lineales y jerárquicas?
+- ¿Qué principios restringen el orden de los constituyentes en español?
+- ¿Qué principios nos permiten manipular el orden de estos elementos en la oración? 
+- ¿Cuál es la estructura básica de la oración en español?
+- ¿Qué diferencias y qué semejanzas existen entre las oraciones simples y las oraciones compuestas?
 
 ---
-#### Semana 4 - Lunes 27 al viernes 1º de octubre de 2021 
-# Actividad | Jerarquía y núcleo de compuestos V + N -> N
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - nociones básicas
 
-## .center[el abrelatas]
-## .center[el limpiaparabrisas]
-## .center[el sacacorchos]
-## .center[el tragaluz vs el tragamonedas]
+1. ¿Qué es una oración?
+2. ¿Podemos definir la sintaxis de una lengua como una lista exhaustiva de las oraciones en una lengua?
+
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - Actividad: combinatorios 
+
+Forma tantas oraciones como pueda utilizando las palabras siguientes:
+
+#-  pibos, conglatones, están, tomelando, en la codería, retonadamente, con pocos albitarros, los
+
+(no tienes que utilizar todas las palabras de la lista)
 
 
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - cuestiones a las que prestarle atención
+
+- tipos de agramaticalidad
+- recursividad
+- orden de las palabras 
+- ambigüedad estructural
+- ¿cuáles son las piezas mínimas?
+
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - ¿cómo determinar qué constituye un constituyentes?
+
+## Pruebas de constituyentes:
+
+### - pruebas de sustitución 
+### - pruebas de movimiento
+
+#Consideremos la oración
+
+- Mi hermano vio a un niño con unos binoculares.
+
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - ¿cómo determinar qué constituye un constituyentes?
+
+## Consideremos la oración
+
+### - Mi hermano vio a un niño con unos binoculares.
 
 
-???
-significado: es un aparato que limpia y para las brisas?
-el núcleo
-la pluralización
-jerarquia? [V + [V + N]]
+[RSyntax Tree Generator](https://yohasebe.com/rsyntaxtree/)
 
+[Sapling](https://groverburger.github.io/sapling/) 
 
 <!-- Run this to upload this to GoogleDrive -->
 ```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
@@ -83,8 +114,8 @@ jerarquia? [V + [V + N]]
 #this method work, but plots will not render 
 #Docker HAS TO BE RUNNING FOR THIS TO WORKx
 
-pagedown::chrome_print("Spanish327_week4.html", output = "week4_327.pdf")
-slides <- drive_put("week4_327.pdf", path = "Fall_2021/week4_327.pdf")
+pagedown::chrome_print("Spanish327_week5.html", output = "week5_327.pdf")
+slides <- drive_put("week5_327.pdf", path = "Fall_2021/week5_327.pdf")
 slides <- slides %>%
    drive_share(role = "reader", type = "anyone")
 
