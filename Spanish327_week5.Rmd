@@ -165,6 +165,16 @@ son (a) y (b) oraciones?
 ### - Ella me dio **un libro para María**.
 ### - Tienes un ayudante **increíblemente eficiente**.
 
+
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - Ambiguedad estructural
+
+### 1. Mis primos comieron una sopa con pan.
+### 2. Entendí la demostración del teorema de Juan.
+### 3. Juan trajo un mapa de Italia.
+### 4. Un hombre alto golpeó a una mujer con un bolso.
+
 <!-- Run this to upload this to GoogleDrive -->
 ```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
 
