@@ -20,7 +20,11 @@ output:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(fig.retina = 3,
                       fig.width = 7,
-                      fig.height = 5)
+                      fig.height = 5, 
+                      echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      include = TRUE)
 
 library(tidyverse)
 library(skimr)
@@ -105,6 +109,61 @@ Forma tantas oraciones como pueda utilizando las palabras siguientes:
 [RSyntax Tree Generator](https://yohasebe.com/rsyntaxtree/)
 
 [Sapling](https://groverburger.github.io/sapling/) 
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - ¿cómo determinar qué constituye un constituyente?
+
+## - Mi hermano vio a un niño con unos binoculares.
+
+```{r}
+include_graphics("images/mihermanovioauninoconunosbinoculares.png")
+```
+
+???
+preguntas, cuál es el núcleo de cada constituyente?
+
+---
+
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - la noción de núcleo
+
+## a. La **ventana** roja de la casa 
+## b. La **casa** de la ventana roja
+
+- ¿Cuál es el núcleo de (a) y de (b)?
+- ¿Cómo sabemos?
+
+???
+son (a) y (b) oraciones?
+
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - Tipos de constituyentes
+
+## - sintagma/frase nominal SN/FN
+## - sintagma verbal SV/FV
+## - sintagma adjetival SA/FA
+## - sintagma advervial SAdv/FAdv
+## - Sintagma prepositional SP/FP
+
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - núcleos, constituyentes y sintagmas
+
+### - **Nuestros vecinos insoportable** vinieron a visitarnos.
+### - Vamos a caminar **por el sendero**.
+### - Vamos a caminar **por el sendero de la derecha**.
+### - Me dio algo para **su prima de Boston**.
+
+---
+#### Lunes 4 al viernes 8 de octubre de 2021 
+# Semana 5 - núcleos, constituyentes y sintagmas
+
+
+### - Lo hizo **extraordinariamente bien**.
+### - Los niños a lo que abandonaron sus padres **lloraban de pena**.
+### - Ella me dio **un libro para María**.
+### - Tienes un ayudante **increíblemente eficiente**.
 
 <!-- Run this to upload this to GoogleDrive -->
 ```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
