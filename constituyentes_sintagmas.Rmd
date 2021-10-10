@@ -1,0 +1,144 @@
+---
+title: "Constituyentes Sintácticos"
+author: "Erwin Lares"
+date: "10/9/2021"
+output:
+  pdf_document: default
+  bookdown::pdf_document2: default
+abstract: This document is adapted from Grant Armstrong's notes for Spanish 321
+header-includes:
+- \usepackage{graphicx}
+- \usepackage{float}
+- \usepackage{longtable}
+- \usepackage{gb4e} \noautomath % for glosses.without this it won't compile!!!
+- \usepackage{ragged2e}
+- \usepackage{tikz-qtree} %for simple tree syntax
+- \usepackage[linguistics]{forest}
+- \usepackage{setspace}\doublespacing
+- \usepackage{inputenc}
+- \usepackage{indentfirst}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      include = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(tinytex)
+library(rmarkdown)
+library(bookdown)
+library(knitr)
+```
+
+
+# Introducción 
+
+Podemos observar que en las lenguas naturales, las palabras se combinan para formar unidades que vamos a llamar constituyentes. A continuación vamos a experimentar con los mecanismos básicos del español para crear constituyentes. 
+
+# Definición de un constituyente
+
+"Un constituyente es un grupo de palabras dentro de una oración que se puede $\underline{sustituir}$ por otra palabra sin perder el significado" (Armstrong 2021)
+
+Consideremos (\ref{constituyentes-1}) abajo
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{constituyentes-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{constituyentes-1-a}
+        \underline{Mi computadora nueva} no funciona.
+        
+        \ex\label{constituyentes-1-b}
+        La hija de Juan es \underline{muy traviesa}.
+
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+El grupo de $\underline{palabras}$ $\underline{subrayadas}$ en las oraciones de (\ref{constituyentes-1}) forman constituyentes porque **se puede sustituir todo el grupo por otra palabra sin que la oración pierda el sentido original**. Como evidencia a favor de esta posición, consideremos (\ref{constituyentes-2}). 
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{constituyentes-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{constituyentes-2-a}
+        \underline{Mi computadora nueva} no funciona $\rightarrow$ \underline{Ésa} no funciona.
+        
+        \ex\label{constituyentes-2-b}
+        La hija de Juan es \underline{muy traviesa} $\rightarrow$ La hija de Juan es \underline{así}.
+
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+¿Qué palabras podemos utilizar cuando sustituimos? Depende que la _función_/_distribución_ que realiza el constituyente que queremos sustituir. Por ejemplo, en el caso de (\ref{constituyentes-1-a}), 'mi computadora nueva" es un frase nominal, pero en (\ref{constituyentes-1-b}) es un frase adjetival.
+
+## Palabras que se suelen utilizar para pruebas de sustitución
+
+a. Pronombres -- pueden sustituir frases nominales -- _lo_, _la_, _le_, _los_, _las_, _les_, _éste_, _éstos_, _esto_, _ésta_, _éstas_, etc.
+b. Adverbios -- pueden sustituir frases adverbiales, adjetivales, o preposicionales -- _así_, _allí_, _allá_, etc.
+c. Posesivos tónicos -- pueden sustituir una frase preposicional con _de_ -- _mío_, _mía_, _tuyo_, _tuya_, _suyo_, _suya_, etc.
+
+## Alternativas para establecer que algo es un constituyente: **preguntas**
+
+Cuando se puede reemplazar una grupo de palabras por una palabras interrogativa **y** se puede contestar la pregunta con la secuencia que se está analizando, entonces éso es evidencia a favor de tratar el grupo de palabras como un constituyente, por ejemplo consideremos (\ref{constituyentes-3})
+
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{constituyentes-3}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{constituyentes-3-a}
+            ¿Qué no funciona? $\rightarrow$ Mi computadora nueva
+        \ex\label{constituyentes-3-b}
+            ¿Cómo es la hija de Juan? $\rightarrow$ Muy traviesa
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+## Práctica - prueba de constituyentes
+
+Demuestra que las secuencias subrayadas en los siguientes ejemplos son constituyentes usando una prueba de sustitución o una prueba de sustitución por una palabra interrogativa.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{constituyentes-4}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{constituyentes-4-a}
+            Trabajo con mi \underline{mi papá}
+            
+        \ex\label{constituyentes-4-b}
+            Trabajo \underline{en la tienda de mi papá}
+            
+        \ex\label{constituyentes-4-c}
+            Ellos trabajan \underline{muy rápidamente}
+            
+        \ex\label{constituyentes-4-d}
+            \underline{El vecino que vive al lado de nosotros} ganó la lotería
+            
+        \ex\label{constituyentes-4-e}
+            Me siento \underline{muy bien}
+            
+        \ex\label{constituyentes-4-f}
+            \underline{A las dos de la tarde} vamos a empezar.
+            
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
