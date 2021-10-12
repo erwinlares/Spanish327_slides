@@ -3,9 +3,8 @@ title: "Constituyentes Sintácticos"
 author: "Erwin Lares"
 date: "10/9/2021"
 output:
-  pdf_document: default
   bookdown::pdf_document2: default
-abstract: This document is adapted from Grant Armstrong's notes for Spanish 321
+abstract: "This document is adapted from Grant Armstrong's notes for Spanish 321. It is intended to be a resource for my students of Spanish 327"
 header-includes:
 - \usepackage{graphicx}
 - \usepackage{float}
@@ -33,6 +32,7 @@ library(bookdown)
 library(knitr)
 ```
 
+\newpage
 
 # Introducción 
 
@@ -110,7 +110,7 @@ Cuando se puede reemplazar una grupo de palabras por una palabras interrogativa 
 \doublespacing
 ```
 
-## Práctica - prueba de constituyentes
+## Práctica - pruebas de constituyentes
 
 Demuestra que las secuencias subrayadas en los siguientes ejemplos son constituyentes usando una prueba de sustitución o una prueba de sustitución por una palabra interrogativa.
 
@@ -121,7 +121,7 @@ Demuestra que las secuencias subrayadas en los siguientes ejemplos son constituy
     \begin{xlist} %second level (1.a) 
         
         \ex\label{constituyentes-4-a}
-            Trabajo con mi \underline{mi papá}
+            Trabajo con \underline{mi papá}
             
         \ex\label{constituyentes-4-b}
             Trabajo \underline{en la tienda de mi papá}
@@ -141,4 +141,173 @@ Demuestra que las secuencias subrayadas en los siguientes ejemplos son constituy
     \end{xlist} % end first embedding
 \end{exe}
 \doublespacing
+```
+
+# La frase nominal y sus partes
+
+Los constituyentes reciben sus etiquetas de acuerdo a sus componentes.Los que tienen distribución de nombres se llaman **Frases Nominales** (FN). Una frase nominal consiste en un nombre y otros elementos como modifican a este nombre, como adjetivo, cuantificadores y determinantes.
+
+## FN primera pasada: Nombres solos, Nombres y Adjetivos 
+
+Vamos a ver el primer caso, nombres solos y frases nominales modificadas por adjetivo.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{frases-nominales-1-a}
+            No veo \underline{películas nuevas}.
+            \begin{forest}
+                [FN [N [películas]][A [nuevas]]]
+            \end{forest}
+            
+        \ex\label{frases-nominales-1-b}
+            Comemos \underline{pan dulce} en los días festivos.
+            \begin{forest}
+                [FN [N [pan]][A [dulce]]]
+            \end{forest}
+        
+        \ex\label{frases-nominales-1-c}
+            Juan y yo somos \underline{viejos amigos}.
+            \begin{forest}
+                [FN [A [viejos]][N [amigos]]]
+            \end{forest}
+        
+        \ex\label{frases-nominales-1-d}
+            No hay \underline{dinero}.
+            \begin{forest}
+                [N [dinero]]
+            \end{forest}
+       
+    \end{xlist} % end first embedding
+\end{exe}
+```
+Terminología importante:
+
+- **FN**: frase nominal
+- **N**: nombre
+- **A**: adjetivo
+- **N** "projecta" su etiqueta a la FN y por tanto es el núcleo de la FN
+
+Una característica importante que vemos aquí (y que difiere de lo que hace Hualde) es que si no hay otra palabra que modifique al nombre, no hay un FN, simplemente un N.
+
+## FN segunda pasada: Nombres, cuantificadores y determinantes
+
+Otra manera de crear FFNN consiste en añadir cuantificadores y determinantes. Para refrescar la memoria
+- los determinantes: artículos definidos e indefinidos, demostrativos, los posesivos átonos. La etiqueta es **D**
+- los cuantificadores: los números y palabras que describen cantidades como todo, mucho, bastante, ningún y poco. La etiqueta es **Cu**
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{frases-nominales-2-a}
+            Salieron \underline{tres películas nuevas} ayer.
+            \begin{forest}
+            where n children=0{tier=word}{}
+                [FN [Cu [tres]][FN [N [películas]][A [nuevas]]]]
+            \end{forest}
+            
+        \ex\label{frases-nominales-2-b}
+            no me gusta \underline{el pan dulce}.
+            \begin{forest}
+            where n children=0{tier=word}{}
+                [FN [D [el]][FN [N [pan]][A [dulce]]]]
+            \end{forest}
+        
+        \ex\label{frases-nominales-2-c}
+            \underline{Los mejores amigos} son los que te ayudan siempre.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [D [los]][FN [A [mejores]][N [amigos]]]]
+            \end{forest}
+        
+        \ex\label{frases-nominales-2-d}
+            No hay \underline{mucho dinero}.
+            \begin{forest}
+                [FN [Cu [mucho]][N [dinero]]]
+            \end{forest}
+       
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Cuando hay más de un modificador de un nombre, habrá varias capas de la FN. Esta son las convenciones que utilizaremos.
+
+- la ramificación es binaria (no salen más de dos ramas de una etiqueta)
+- las capas intermedias son proyecciones de la etiqueta. Si la etiqueta es N, la capa intermedia será FN.
+- los cuantificadores y determinantes siempre se combinan después de los adjetivos y frases preposicionales. Por convención, asumiremos que los elementos a la derecha se combinan primero con el núcleo y los de la izquierda se combinan después. 
+
+Los siguientes ejemplos tienen múltuiples adjetivos y un determinante.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-3}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{frases-nominales-3-a}
+            Este famoso café colombiano.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [D [Este]][FN [A [famoso]][FN [N [café]][A [colombiano]]]]]
+            \end{forest}
+            
+        \ex\label{frases-nominales-3-b}
+            Una flor amarilla pequeña.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [D [Una]][FN [FN [N [flor]][A [amarilla]]][A [pequeña]]]]
+            \end{forest}
+        
+        \ex\label{frases-nominales-3-c}
+            La literatura medieval española.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [D [la]][FN [FN [N [literatura]][A [medieval]]][A [española]]]]
+            \end{forest}
+        
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Es posible tener determinantes y cuantificadores juntos en una FN
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-4}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-nominales-4-a}
+            ¿Dónde están \underline{esos tres gatos locos}?
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [D [esos]][FN [Cu [tres]][FN [N [gatos]][A [locos]]]]]
+            \end{forest}
+        
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+### Practica - Practica con las siguientes frases subrayadas
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-5}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{frases-nominales-5-a}
+            Mi hijo tiene \underline{un pequeño carro deportivo}.
+        
+        \ex\label{frases-nominales-5-b}
+            \underline{La producción quesera americana} ha sido afectada por los cambios del libre comercio.
+            
+    \end{xlist} % end first embedding
+\end{exe}
 ```
