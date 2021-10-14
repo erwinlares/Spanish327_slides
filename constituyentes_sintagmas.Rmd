@@ -311,3 +311,158 @@ Es posible tener determinantes y cuantificadores juntos en una FN
     \end{xlist} % end first embedding
 \end{exe}
 ```
+
+## FN tercera pasada: coordinación
+
+Otra manera de aumentar una frade nomina (y en general cualquier otro tipo de frases) es mediante la **coordinación**. La conjunción _y_ puede formar una frase nominal compleja. Consideremos los siguientes ejemplos:
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-6}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-nominales-6-a}
+            Ya salieron \underline{los perros y gatos}?
+
+            \ex\label{frases-nominales-6-b}
+            Ya salieron \underline{los perros y los gatos}?
+
+            
+            \ex\label{frases-nominales-6-c}
+            \underline{Juan y Pedro siempre} llegan tarde?
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Vamos a representar la coordinación con una estructura **ternaria** (en oposición a binaria). COn esta estrcutura vamos a representar que la estructura resultante es la unión de dos partes iguales. Entonces indicaremos que la conjunción toma un elemento a la izquierda y otro a la derecha. Como los elementos son de la misma categoría sintáctica, el resultado es una frase del mismo tipo. 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-7}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-nominales-7-a}
+            los perros y gatos 
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [D [los]][N [N [perros]][Conj [y]][N [gatos]]]]
+            \end{forest}
+
+            \ex\label{frases-nominales-7-b}
+            los perros y los gatos 
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [FN [D [los]][N [perros]]][Conj [y]][FN [D [los]][N [perros]]]]
+            \end{forest}
+            
+            \ex\label{frases-nominales-7-c}
+            Juan y Pedro
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [N [N [Juan]][Conj [y]][FN [Pedro]]]
+            \end{forest}
+            
+
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+### Práctica
+
+Practica con las siguientes frases subrayadas. Revisaremos las respuestas juntos en clase.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-nominales-8}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-nominales-8-a}
+            \underline{Mi mamá y mi papá} viven en California.
+
+            \ex\label{frases-nominales-8-b}
+            \underline{Todos los senadores y representates} van a discutir el nuevo proyecto de ley.
+            
+            \ex\label{frases-nominales-8-c}
+            Hay \underline{perros flacos y gatos gordos} en el hotel de mascotas.
+
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+# Los pronombres
+
+## Los tónicos
+
+Como sabemos hay dos tipos de pronombres: los tónicos y los clíticos. Los pronombres tónicos tienen la misma distribución de los nombres. Consecuentemente, vamos a utilizar la misma etiqueta sintáctica **N** para representar su estructura. No es muy común ver a los pronombres tónicos modificados por determinantes, cuantificadores y adjetivos, es ciertamente una posibilidad. Por ejemplo abajo en \ref{pronombres-1} vemos varios ejemplos de pronombres tónicos simples, que se etiquetarán con **N**. Es decir, yo $\rightarrow$ **N**, ti $\rightarrow$ **N**, nosotros $\rightarrow$ **N**. 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{pronombres-1}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{pronombres-1-a}
+            \underline{Yo} vivo en Madison.
+
+            \ex\label{pronombres-1-b}
+            Siempre hablamos bien de \underline{ti}.
+
+            \ex\label{pronombres-1-c}
+            \underline{Nosotros} somos amigos.
+
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Vamos a representar los pronombres tónicos modificados de la siguiente manera:
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{pronombres-2}
+    Pronombres tónicos modificados:
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{pronombres-2-a}
+            María siempre habla de \underline{sí misma}?
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [N [sí]][A [misma]]]
+            \end{forest}
+
+            \ex\label{pronombres-2-b}
+            \underline{Todos ellos} viven en Madison.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [Cu [todos]][N [ellos]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Los pronombres tónicos se pueden combinar con cualquier \underline{otro nombre o frase nominal}. A manera de práctica, intenta representar con un árbol sintáctico el grupo de palabras subrayadas en( \ref{pronombres-3}).
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{pronombres-3}
+    Pronombres tónicos modificados:
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{pronombres-3-a}
+            Este asunto es \underline{entre tú y yo}.
+
+            \ex\label{pronombres-3-b}
+            \underline{Todos nosotros y ustedes} vamos a la fiesta.
+
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+## Los clíticos
+
