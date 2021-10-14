@@ -33,9 +33,9 @@ percentages_5 |> skimr::skim()
 # Dataviz
 
 ```{r}
-percentages_5 |> 
+percentages |> 
     ggplot(aes(x = score)) +
-    geom_bar()
+    geom_histogram(bins = 10)
 ```
 
 
