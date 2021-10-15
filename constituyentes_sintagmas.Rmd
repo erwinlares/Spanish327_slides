@@ -593,11 +593,54 @@ En general las estructuras de las FP no serás más complicadas de lo que se apr
 
 Los adverbios intensificadores y focalizadores cumplen, para las FP, un papel análogo al que los determinantes y los cuantificadores hacen para las FN. Aparecen a la izquierda del núcleo y tienen significados más abstractos que los complementos. 
 
-### Lista de adverbios intensificadores y focalizadores
+## Lista de adverbios intensificadores y focalizadores
 
 - Intensificadores: muy, mucho, un poco, poco, bastante, demasiado, más, menos, tan, completemente, parcialmente, extremadamente, y otros.
 - Focalizadores: casi, justo, precisamente, solo, solamente 
 
-## Práctica:
+### Práctica:
 
 Completa el árbol sintáctico de las FP en (\ref{preposiciones-3}).
+
+## FP -- usos
+
+Las FFPP se pueden utilizar para introducir poseedores, ubicaciones, y otros tipos de relaciones semánticas. Uno de los usos más comunes para las FFPP es modificar los nombres dentro de una FN. Considerenos, por ejemplo, las oraciones en (\ref{preposiciones-4}).
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{preposiciones-4}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{preposiciones-4-a}
+            Trabajo \underline{en la tienda de mi papá}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                []
+            \end{forest}
+
+            \ex\label{preposiciones-4-b}
+            Quiero \underline{una gran botella de agua}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                []
+            \end{forest}
+            
+            \ex\label{preposiciones-4-c}
+            {La taza de cafe de Ana} se cayó de la mesa.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                []
+            \end{forest}
+            
+            \ex\label{preposiciones-4-d}
+            Hoy es \underline{el cumpleaños del hijo de mi amiga}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FN [D [el]][FN [N [cumpleaños]][FP [P [de]][FN [D [el]][FN [N [ hijo]] [FP [P [de]][FN [D [mi]][N [amigo]]]]]]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
