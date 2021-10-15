@@ -3,6 +3,8 @@ title: "Examen parcial de morfología"
 output:
   pdf_document: default
   html_notebook: default
+  html_document:
+    df_print: paged
 ---
 
 ```{r, echo=FALSE, include=TRUE, warning=FALSE, message=FALSE}
@@ -10,24 +12,43 @@ output:
 library(tidyverse)
 library(kableExtra)
 library(broom)
-
+library(skimr)
 
 ```
 
 
-# Unaltered Results 
+# Results 
 
-```{r}
-
+```{r, echo=FALSE}
 
 scores <- c(39,35.5,47.5,42,36,38.5,40,46,46.5,46.5,40,32,29.5,40,46,44,47,46.5,39)
 percentages <- tibble(score = scores/50*100) 
 percentages_5 <- tibble(score = scores/45*100)
-percentages_10 <- tibble(score = scores/45*100)
 
-percentages |> skimr::skim()
-percentages_5 |> skimr::skim()
+percentages |> 
+    summary() |> 
+    kable("latex",
+          booktabs = TRUE,
+#          col.names = NULL, 
+          caption = "Midterm 1 - raw scores") %>% 
+  kable_styling(latex_options = c("striped",
+                                  font_size = 12,
+                                  "H"#,"scale_down"
+                                  )) 
 
+percentages_5 |> 
+    summary() |> 
+    kable("latex",
+          booktabs = TRUE,
+#          col.names = NULL, 
+          caption = "Midterm 1 - adjusted scores") %>% 
+  kable_styling(latex_options = c("striped",
+                                  font_size = 12,
+                                  "H"#,"scale_down"
+                                  ))
+    
+
+    
 
 ```
 # Dataviz

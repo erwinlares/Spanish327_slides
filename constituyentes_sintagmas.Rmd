@@ -393,9 +393,9 @@ Practica con las siguientes frases subrayadas. Revisaremos las respuestas juntos
 \end{exe}
 ```
 
-# Los pronombres
+## FN cuarta pasada: los pronombres
 
-## Los tónicos
+### Los tónicos
 
 Como sabemos hay dos tipos de pronombres: los tónicos y los clíticos. Los pronombres tónicos tienen la misma distribución de los nombres. Consecuentemente, vamos a utilizar la misma etiqueta sintáctica **N** para representar su estructura. No es muy común ver a los pronombres tónicos modificados por determinantes, cuantificadores y adjetivos, es ciertamente una posibilidad. Por ejemplo abajo en \ref{pronombres-1} vemos varios ejemplos de pronombres tónicos simples, que se etiquetarán con **N**. Es decir, yo $\rightarrow$ **N**, ti $\rightarrow$ **N**, nosotros $\rightarrow$ **N**. 
 
@@ -464,5 +464,140 @@ Los pronombres tónicos se pueden combinar con cualquier \underline{otro nombre 
 \end{exe}
 ```
 
-## Los clíticos
+### Los clíticos
 
+Los pronombres clíticos no tienen la misma distribución que los nombres o las frases nominales. Los clíticos necesitan "apoyarse" en un verbo. No pueden modificarse ni pueden formar parte de una coordinación como se muestra en el ejemplo (\ref{pronombres-4})
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{pronombres-4}
+    Pronombres tónicos modificados:
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{pronombres-4-a}
+            *María se misma critica (vs. María se critica a sí misma).
+
+            \ex\label{pronombres-4-b}
+            *Los y las quiero (vs Los quiero a ellos y a ellas).
+
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Por estas razones, vamos a representar a los pronombres clíticos de manera diferente. **No** son como los otros nombres y frases nominales; tienen su propia distribución sintáctica. Para representar su comportamiento, utilizaremos la etiqueta CL y la regla (\ref{pronombres-5})
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{pronombres-5}
+    \begin{itemize}
+
+        \item Reciben la etiqueta CL y forman una unidad sintáctica con el núcleo verbal.
+        \item Un CL puede aparecer antes o después del núcleo verbal con el cual forma una unidad.
+
+    \end{itemize}
+\end{exe}
+```
+
+# La frase preposicional 
+
+Una frase nominal requiere un elemento que vamos a llamar su **complemento**. EL complemento es típicamente un nombre o una frase nominal que aparece a la derecha de la preposición. La combinación de una preposición y su complemento forman una frase preposicional FP. Mira los ejemplos siguiente (\ref{preposiciones-1}).
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{preposiciones-1}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{preposiciones-1-a}
+            Trabajo \underline{en la tienda}.
+
+            \ex\label{preposiciones-1-b}
+            Juan es \underline{de Guatemala}.
+            
+            \ex\label{preposiciones-1-c}
+            Vamos \underline{al partido}.
+            
+            \ex\label{preposiciones-1-b}
+            Lo hicimos \underline{sin ninguna ayuda}.
+
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+### Lista de las preposiciones en español
+
+- a, ante, bajo, con , contra, de, desde, durante, en, entre, hacia, hasta, mediante, para, por, según, sin, so, sobre, tras, versus, vía
+
+## Representaciones arbóreas 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{preposiciones-2}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{preposiciones-2-a}
+            en la tienda
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FP [P [en]][FN [D [la]][N [tienda]]]]
+            \end{forest}
+
+            \ex\label{preposiciones-2-b}
+            de Guatemala
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [P [P [de]][N [Guatemala]]]
+            \end{forest}
+            
+            \ex\label{preposiciones-2-c}
+            al partido
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FP [P [a]][FN [D [el]][N [partido]]]]
+            \end{forest}
+            
+            \ex\label{preposiciones-2-d}
+            al partido
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FP [P [sin]][FN [Cu [ninguna]][N [ayuda]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+En general las estructuras de las FP no serás más complicadas de lo que se aprecia en (\ref{preposiciones-2}). Sin embargo, hay casos donde modificamos FFPP con adverbios en construcciones que llamamos _intensificadores de grado_ o _focalizadores_, como se muestra en el ejemplo (\ref{preposiciones-3}).
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{preposiciones-3}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{preposiciones-3-a}
+            Ese tipo es \textit{muy} del Madrid.
+
+            \ex\label{preposiciones-3-b}
+            Los estudiantes graduados están \textit{completamente} sin dinero.
+            
+            \ex\label{preposiciones-3-c}
+            Lo que buscas está \textit{justo} sobre la mesa.
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Los adverbios intensificadores y focalizadores cumplen, para las FP, un papel análogo al que los determinantes y los cuantificadores hacen para las FN. Aparecen a la izquierda del núcleo y tienen significados más abstractos que los complementos. 
+
+### Lista de adverbios intensificadores y focalizadores
+
+- Intensificadores: muy, mucho, un poco, poco, bastante, demasiado, más, menos, tan, completemente, parcialmente, extremadamente, y otros.
+- Focalizadores: casi, justo, precisamente, solo, solamente 
+
+## Práctica:
+
+Completa el árbol sintáctico de las FP en (\ref{preposiciones-3}).
