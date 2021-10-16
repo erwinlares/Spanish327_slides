@@ -464,7 +464,7 @@ Los pronombres tónicos se pueden combinar con cualquier \underline{otro nombre 
 \end{exe}
 ```
 
-### Los clíticos
+### Los clíticos{#seccion-cliticos}
 
 Los pronombres clíticos no tienen la misma distribución que los nombres o las frases nominales. Los clíticos necesitan "apoyarse" en un verbo. No pueden modificarse ni pueden formar parte de una coordinación como se muestra en el ejemplo (\ref{pronombres-4})
 
@@ -519,7 +519,7 @@ Una frase nominal requiere un elemento que vamos a llamar su **complemento**. EL
             \ex\label{preposiciones-1-c}
             Vamos \underline{al partido}.
             
-            \ex\label{preposiciones-1-b}
+            \ex\label{preposiciones-1-d}
             Lo hicimos \underline{sin ninguna ayuda}.
 
     \end{xlist} % end first embedding
@@ -602,9 +602,9 @@ Los adverbios intensificadores y focalizadores cumplen, para las FP, un papel an
 
 Completa el árbol sintáctico de las FP en (\ref{preposiciones-3}).
 
-## FP -- usos
+## La FP -- usos
 
-Las FFPP se pueden utilizar para introducir poseedores, ubicaciones, y otros tipos de relaciones semánticas. Uno de los usos más comunes para las FFPP es modificar los nombres dentro de una FN. Considerenos, por ejemplo, las oraciones en (\ref{preposiciones-4}).
+Las FFPP se pueden utilizar para introducir poseedores, ubicaciones, y otros tipos de relaciones semánticas. Uno de los usos más comunes para las FFPP es modificar los nombres dentro de una FN. Considerenos, por ejemplo, las oraciones en (\ref{preposiciones-4}). **En particular**, piensa por qué (\ref{preposiciones-4-c}) y (\ref{preposiciones-4-d}) no tienen la misma representación. 
 
 ```{=tex}
 
@@ -616,21 +616,21 @@ Las FFPP se pueden utilizar para introducir poseedores, ubicaciones, y otros tip
             Trabajo \underline{en la tienda de mi papá}
             \begin{forest}
                 where n children=0{tier=word}{}
-                []
+                [FP [P [en]][FN [D [la]][FN [N [tienda]][FP [P [de]][FN [D [mi]][N [papá]]]]]]]
             \end{forest}
 
             \ex\label{preposiciones-4-b}
             Quiero \underline{una gran botella de agua}
             \begin{forest}
                 where n children=0{tier=word}{}
-                []
+                [NP [D [una]][FN [A [gran]][FN [N [botella]][FP [P [de]][N [agua]]]]]]
             \end{forest}
             
             \ex\label{preposiciones-4-c}
-            {La taza de cafe de Ana} se cayó de la mesa.
+            \underline{La taza de cafe de Ana} se cayó de la mesa.
             \begin{forest}
                 where n children=0{tier=word}{}
-                []
+                [FN [D [la]][FN [FN [N [taza]][FP [P [de]][N [café]]]][FP [P [de]][N [Ana]]]]]
             \end{forest}
             
             \ex\label{preposiciones-4-d}
@@ -644,3 +644,458 @@ Las FFPP se pueden utilizar para introducir poseedores, ubicaciones, y otros tip
 \end{exe}
 ```
 
+Como se había mencionada antes, se puede coordinar todo tipo de frases, incluyendo las FFPP.  Considera el ejemplo (\ref{preposiciones-5}) abajo. 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{preposiciones-5}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{preposiciones-5-a}
+            Este libro no es \underline{del profe ni de los estudiantes}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FP [FP [P [de]][FN [D [el]][N [profe]]]][Conj [ni]][FP [P [de]][FN [D [los]][N [estudiantes]]]]]
+            \end{forest}
+
+            \ex\label{preposiciones-5-b}
+            Pídeme un café \underline{sin leche y con azúcar}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FP [FP [P [sin]][N [leche]]][Conj [y]][FP [P [con]][N [azúcar]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+# La frase adverbial y sus partes 
+
+Los adverbios forman frases adverbiales (FAdv). Muchas frases adverbiales toman una frase preposicional como complemente. La FP más utilizada de esta manera generalmente tiene la preposición **"de"**. Desde un punto de vista funcional, las FFAdvs añaden este tipo de información a la oración en la cual aparecen: _manera_ (cómo), _lugar_ (dónde), _tiempo_ (cuándo), y _razón_ (porqué).
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{conjunciones-1}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{conjunciones-1-a}
+            Era así \underline{antes de la guerra civil}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv [antes]][FP [P [de]][FN [D [la]][FN [N [guerra]][A [civil]]]]]]
+            \end{forest}
+
+            \ex\label{conjunciones-1-b}
+            Pon dinero \underline{debajo de la cama}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv [debajo]][FP [P [de]][FN [D [la]][N [cama]]]]]
+            \end{forest}
+            
+            \ex\label{conjunciones-1-c}
+            Hay un ovni \underline{encima del edificio}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv [encima]][FP [P [de]][FN [D [el]][N [edificio]]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Al igual que con las preposiciones, los adverbios también pueden modificarse con intensificadores de grado y focalizadores. Considera por ejemplo (\ref{conjunciones-2})
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{conjunciones-2}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{conjunciones-2-a}
+            Llegaste \underline{mucho antes del concierto}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv$_{grad}$ [mucho]][FAdv [Adv [antes]][FP [P [de]][FN [D [el]][N [concierto]]]]]]
+            \end{forest}
+
+            \ex\label{conjunciones-2-b}
+            Corre \underline{muy rápidamente}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv$_{grad}$ [Muy]][Adv [rápidamente]]]
+            \end{forest}
+            
+            \ex\label{conjunciones-2-c}
+            Los Osos de Chicago juegan \underline{extremadamente mal}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv$_{grad}$ [extremadamente]][Adv [mal]]]
+            \end{forest}
+            
+            \ex\label{conjunciones-2-d}
+            Está \underline{casi bien}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv$_{foc}$ [casi]][Adv [bien]]]
+            \end{forest}
+            
+            \ex\label{conjunciones-2-e}
+            Ponlo \underline{justo allí}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FAdv [Adv$_{foc}$ [justo]][Adv [allí]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+### Práctica
+
+¡Ahora te toca a ti! Analiza las siguientes frases coordinadas con adverbios.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{conjunciones-3}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{conjunciones-3-a}
+            Lo hicieron \underline{lenta y cuidadosamente}
+            
+            \ex\label{conjunciones-3-b}
+            Esto va a ocurrir \underline{antes o después de la fiesta}.
+            
+            \ex\label{conjunciones-3-c}
+            \underline{Tarde o temprano} van a llegar.
+
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+# La frase adjetival y sus partes
+
+La FA tiene una estructura similar a la frase adverbial. Puede tener complementos preposicionales y puede también admitir intensificadores de grado, así como también otros adverbios en posición antepuesta que modifica la FA. 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{adjetivos-1}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{adjetivos-1-a}
+            La cubeta \underline{llena de agua}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FA [A [llena]][FP [P [de]][N [agua]]]]
+            \end{forest}
+
+
+            \ex\label{adjetivos-1-b}
+            La hija de Juan es \underline{muy traviesa}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FA [Adv$_{grad}$ [muy]][A [traviesa]]]
+            \end{forest}
+            
+            \ex\label{adjetivos-1-c}
+            Estoy \underline{bastante contento con el resultado}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FA [Adv$_{grad}$ [bastante]][FA [A [contento]][FP [P [con]][FN [D [el]][N [resultado]]]]]]
+            \end{forest}
+           
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+# La frase verbal y sus partes
+
+La FV incluye los complementos directos e indirectos del verbo. La FV también incluye los modificadores circumstanciales (las frases adverbiales y preposicionales), pero -- **criticamente** --, no incluye al sujeto. En esta sección, vamos a hablar de cómo distinguir entre el sujeto y los complementos del verbo. En la primera pasada, vamos a ilustrar cuáles son los diferentes componentes de la frase verbal.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frase-verbal-1}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frase-verbal-1-a}
+            El niño \underline{estornudó}
+
+            \ex\label{frase-verbal-1-b}
+            El niño \underline{encontró un juguete}.
+
+            \ex\label{frase-verbal-1-c}
+            El niño \underline{envió una carta a su amigo}.
+
+            \ex\label{frase-verbal-1-d}
+            El niño \underline{vio una película ayer con su amigo en el cine}.
+
+            
+    \end{xlist} % end first embedding
+\end{exe}
+```
+
+Imagina que sólo estamos considerando la para subrayada, podemos observar que:
+
+- (\ref{frase-verbal-1-a}) consta de simplement **un verbo**.
+- (\ref{frase-verbal-1-b}) consta de  **un verbo** y **un argumento**. Este único argumento es el  complemento directo.
+- (\ref{frase-verbal-1-c}) consta de **un verbo** y **dos argumentos**. Un complemento directo y un complemento indirecto.
+- (\ref{frase-verbal-1-d}) consta de **un verbo**, **un argumento**, y varios **modificadores circumstanciales**. Sólo vemos un complemento directo. El resto son frases adicionales, pero no necesarias. 
+
+Retomemos las oraciones anteriores, pero esta vez míremos la estructura asociada a cada oración. 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frase-verbal-2}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frase-verbal-2-a}
+            El niño \underline{estornudó}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [V [estornudo]]
+            \end{forest}
+
+
+            \ex\label{frase-verbal-2-b}
+            El niño \underline{encontró un juguete}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FV [V [encontró]][FN [D [un]][N [juguete]]]]
+            \end{forest}
+            
+            \ex\label{frase-verbal-2-c}
+            El niño \underline{envió una carta a su amigo}.
+            $\newline$
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FV [FV [V [envió]][FN [D [una]][N [carta]]]][FP [P [a]][FN [D [su]][N [amigo]]]]]
+            \end{forest}
+  
+            \ex\label{frase-verbal-2-d}
+            El niño \underline{vio una película ayer con su amigo en el cine}.
+            $\newline$
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FV [FV [FV [FV [V [vio]][FN [D [una]][N [película]]]][FAdv [Adv [ayer]]]][FP [P [con]][FN [D [su]][N [amigo]]]]][FP [P [en]][FN [D [el]][N [cine]]]]]
+            \end{forest}      
+            
+    \end{xlist} % end first embedding
+\end{exe}
+
+
+```
+
+## FV y los clíticos
+
+Recordemos los pronombres clíticos que los que hablamos en la sección (\ref{seccion-cliticos}). Los clíticos tienen una distribución muy peculiar: siempre aparecen al lado de un verbo. Intuitivamente, los clíticos parecen más parte del verbo que de los otros componentes de la FV. Por esta razón, vamos a representar a los clíticos como parte del verbo. Es decir, cuando tengamos a un clítico en una oración, vamos a combinar el núcleo verbal con el clítico para formar un **verbo complejo**. 
+
+Recordemos \underline{la regla de clíticos} (\ref{pronombres-5}):
+
+- Reciben la etiqueta CL y forman una unidad sintáctica con el núcleo verbal.
+- Un CL puede aparecer antes o después del núcleo verbal con el cual forma una unidad.
+
+Examinemos, por ejemplo, las oraciones en (\ref{frase-verbal-3}). 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frase-verbal-3}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frase-verbal-3-a}
+            María \underline{se lo dio a Juan}
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FV [V [CL [se]][V [CL [lo]][V [dio]]]][FP [P [a]][N [Juan]]]]
+            \end{forest}
+
+
+            \ex\label{frase-verbal-3-b}
+            Yo \underline{me senté en el sillón}.
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FV [V [CL [me]][V [senté]]][FP [P [en]][FN [D [el]][N [sillón]]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+## FV simples con más de un verbo
+
+Recordemos también, que es posible tener una oración simple en la que -- técnicamente -- aparecen más de dos verbos. Repasa la seción 3.1, página 245 del libro de texto.  
+
+Por ejemplo, los verbos auxiliares son parte de la frase verbal. Como siempre aparecen antes de los verbos léxicos, empezaremos con la suposición de que el verbo auxiliar proyecta su propia frase verbal que se combinará con la frase verbal del verbo léxico. Estudia con detenimiento los ejemplos en (\ref{frase-verbal-4})
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frase-verbal-4}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frase-verbal-4-a}
+            El edifició \underline{fue derrumbado a propósito}.  
+            $\rightarrow$ ser: auxiliar pasivo
+            $\newline$
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [FV$_{aux}$ [V$_{aux}$ [fue]][FV [V [derrumbado]][FP [P [a]][N [propósito]]]]]
+            \end{forest}
+
+            \ex\label{frase-verbal-4-b}
+            \underline{Estoy haciendo mi trabajo}.  
+            $\rightarrow$ estar: auxiliar progressivo
+            $\newline$
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [FV$_{aux}$ [V$_{aux}$ [estoy]][FV [V [haciendo]][FN [D [mi]][N [trabajo]]]]]
+            \end{forest}
+            
+            \ex\label{frase-verbal-4-c}
+            Ellos \underline{han visitado Egipto}.  
+            $\rightarrow$ haber: auxiliar perfectivo
+            $\newline$
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FV$_{aux}$ [V$_{aux}$ [han]][FV [V [visitado]][N [Egipto]]] ]
+            \end{forest}
+
+            \ex\label{frase-verbal-4-d}
+            El profesor \underline{puede ayudarnos en horas de oficina}.  
+            $\rightarrow$ poder: auxiliar modal
+            $\newline$
+            \begin{forest}
+                where n children=0{tier=word}{}
+                [FV$_{aux}$ [V$_{aux}$ [puede]][FV [V [V [ayudar]][CL [nos]]][FP [P [en]][FN [N [horas]][FP [P [de]][N [oficina]]]]]]]
+            \end{forest}
+
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+### Práctica 
+
+Dibuja el árbol sintáctico que corresponde con cada una de las oraciones en (\ref{frase-verbal-5}).
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frase-verbal-5}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frase-verbal-5-a}
+            \underline{Me robaron el carro ayer}.  
+
+            \ex\label{frase-verbal-5-b}
+            Siempre\underline{hablo muy bien de ti}.  
+            
+            \ex\label{frase-verbal-5-c}
+            \underline{Me levantaré muy tempraño mañana}.  
+
+            \ex\label{frase-verbal-5-d}
+            \underline{Ya te lo dije a ti}.  
+            
+            \ex\label{frase-verbal-5-e}
+            Las niñas \underline{se comieron el helado rápidamente con una cuchara}.  
+            
+            \ex\label{frase-verbal-5-f}
+            \underline{Llegamos temprano a la reunión}.  
+
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+# Ambigüedad de las frases 
+
+Alguna frases son ambiguas. Ambiguo en el sentido de que tienen más de una interpretación. Considera, por ejemplo, (\ref{frases-ambiguas-1})
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-ambiguas-1}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-ambiguas-1-a}
+            Juan \underline{compró una taza de café de Starbucks}.  
+
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+La oración (\ref{frases-ambiguas-1}) tiene dos posibles interpretaciones: 
+
+1. Interpretación a: la taza tiene café y el café es de Starbucks (la taza viene de otro sitio).
+1. Interpretación b: la taza de café es de Starbucks (dice "Starbucks")
+
+Este tipo de ambigüedad es interesante por no surge de nninguna palabra en particular dentro de la oración. Es decir, ninguna de las palabras individuales ha cambiado de sentido para dar lugar a las dos interpretaciones diferentes. ¿Cómo podemos dar cuenta de esta ambigüedad entonces?
+
+La solución que vamos a explorar viene de las posibles maneras en que se pueden combinar las palabras que forman el enunciado. Los árboles sintácticos pueden mostrar que esto es una caso de \underline{ambigüedad estructural}.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-ambiguas-2}
+    Representación de la ambigüedad estructural.
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-ambiguas-2-a}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [FN [D [una]][FN [N [taza]][FP [P [de]][FN [N [café]][FP [P [de]][N [Starbucks]]]]]]]
+            \end{forest}
+
+            \ex\label{frases-ambiguas-2-b}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [FN [D [una]][FN [FN [N [taza]][FP [P [de]][N [café]]]][FP[P [de]][N [Starbucks]]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+Recordemos que los árboles sintácticos son modelos mentales de cómo pensamos la mente está interpretando la misma oración. En otras palabras, los árboles sugieren que nuestra mente puede crear dos representaciones (significados) a partir de una sóla oración. La idea podría parecer descabellada, pero tenemos evidencia de otras fenómenos cognitivos donde el mismo estímulo, en este caso visual, se interpreta de dos maneras diferentes. 
+
+Estás son dos imágenes muy famosas:
+\newpage
+
+```{r, out.width="6in"}
+include_graphics("images/my-wife-and-my-mother-in-law-optical-illusion.jpeg")
+```
+\newpage
+```{r, out.width="6in"}
+include_graphics("images/duck-rabbit.png")
+```
+\newpage
+Fisicamente, en cada una de las imágenes no hay dos objetos. Hay simplemente una ilustración. Nuestra mente produce las dos interpretaciones al interpretar la misma imagen de una u otra manera. Se piensa entonces que la ambiguedad se origina en la mente. Pensamos, de la misma manera, que la ambigüedad de las frases en (\ref{frases-ambiguas-2}) viene del mismo sitio: nuestra mente.
+
+### Práctica
+Estas dos oraciones son ambiguas. Dibuja los árboles sintácticos correspondientes a cada interpretación. Asegúrate de indicar explícitamente qué interpretación corresponde a qué árbol. 
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-ambiguas-3}
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-ambiguas-3-a}
+            Necesitamos \underline{más alumnos y profesores inteligentes}.  
+            
+            \ex\label{frases-ambiguas-3-b}
+            \underline{La demonstración del teorema de Einstein} causó una sensación en la universidad. 
+
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
