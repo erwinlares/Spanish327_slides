@@ -145,7 +145,7 @@ Demuestra que las secuencias subrayadas en los siguientes ejemplos son constituy
 
 # La frase nominal y sus partes
 
-Los constituyentes reciben sus etiquetas de acuerdo a sus componentes.Los que tienen distribución de nombres se llaman **Frases Nominales** (FN). Una frase nominal consiste en un nombre y otros elementos como modifican a este nombre, como adjetivo, cuantificadores y determinantes.
+Los constituyentes reciben sus etiquetas de acuerdo a sus componentes. Los que tienen distribución de nombres se llaman **Frases Nominales** (FN). Una frase nominal consiste en un nombre y otros elementos como modifican a este nombre, como adjetivo, cuantificadores y determinantes.
 
 ## FN primera pasada: Nombres solos, Nombres y Adjetivos 
 
@@ -336,7 +336,7 @@ Otra manera de aumentar una frade nomina (y en general cualquier otro tipo de fr
 \end{exe}
 ```
 
-Vamos a representar la coordinación con una estructura **ternaria** (en oposición a binaria). COn esta estrcutura vamos a representar que la estructura resultante es la unión de dos partes iguales. Entonces indicaremos que la conjunción toma un elemento a la izquierda y otro a la derecha. Como los elementos son de la misma categoría sintáctica, el resultado es una frase del mismo tipo. 
+Vamos a representar la coordinación con una estructura **ternaria** (en oposición a binaria). Con esta estructura vamos a representar que la estructura resultante es la unión de dos partes iguales. Entonces indicaremos que la conjunción toma un elemento a la izquierda y otro a la derecha. Como los elementos son de la misma categoría sintáctica, el resultado es una frase del mismo tipo. 
 
 ```{=tex}
 
@@ -397,7 +397,7 @@ Practica con las siguientes frases subrayadas. Revisaremos las respuestas juntos
 
 ### Los tónicos
 
-Como sabemos hay dos tipos de pronombres: los tónicos y los clíticos. Los pronombres tónicos tienen la misma distribución de los nombres. Consecuentemente, vamos a utilizar la misma etiqueta sintáctica **N** para representar su estructura. No es muy común ver a los pronombres tónicos modificados por determinantes, cuantificadores y adjetivos, es ciertamente una posibilidad. Por ejemplo abajo en \ref{pronombres-1} vemos varios ejemplos de pronombres tónicos simples, que se etiquetarán con **N**. Es decir, yo $\rightarrow$ **N**, ti $\rightarrow$ **N**, nosotros $\rightarrow$ **N**. 
+Como sabemos, hay dos tipos de pronombres: los tónicos y los clíticos. Los pronombres tónicos tienen la misma distribución de los nombres. Consecuentemente, vamos a utilizar la misma etiqueta sintáctica **N** para representar su estructura. Aunque no es muy común ver a los pronombres tónicos modificados por determinantes, cuantificadores y adjetivos, es ciertamente una posibilidad. Por ejemplo abajo en \ref{pronombres-1} vemos varios ejemplos de pronombres tónicos simples, que se etiquetarán con **N**. Es decir, yo $\rightarrow$ **N**, ti $\rightarrow$ **N**, nosotros $\rightarrow$ **N**. 
 
 ```{=tex}
 
@@ -445,7 +445,7 @@ Vamos a representar los pronombres tónicos modificados de la siguiente manera:
 \end{exe}
 ```
 
-Los pronombres tónicos se pueden combinar con cualquier \underline{otro nombre o frase nominal}. A manera de práctica, intenta representar con un árbol sintáctico el grupo de palabras subrayadas en( \ref{pronombres-3}).
+Los pronombres tónicos se pueden combinar con cualquier \underline{otro nombre o frase nominal}. A manera de práctica, intenta representar con un árbol sintáctico el grupo de palabras subrayadas en (\ref{pronombres-3}).
 
 ```{=tex}
 
@@ -476,7 +476,7 @@ Los pronombres clíticos no tienen la misma distribución que los nombres o las 
     \begin{xlist} %second level (1.a) 
         
             \ex\label{pronombres-4-a}
-            *María se misma critica (vs. María se critica a sí misma).
+            *María se misma critica (vs María se critica a sí misma).
 
             \ex\label{pronombres-4-b}
             *Los y las quiero (vs Los quiero a ellos y a ellas).
@@ -528,7 +528,7 @@ Una frase nominal requiere un elemento que vamos a llamar su **complemento**. EL
 
 ### Lista de las preposiciones en español
 
-- a, ante, bajo, con , contra, de, desde, durante, en, entre, hacia, hasta, mediante, para, por, según, sin, so, sobre, tras, versus, vía
+- a, ante, bajo, con, contra, de, desde, durante, en, entre, hacia, hasta, mediante, para, por, según, sin, so, sobre, tras, versus, vía
 
 ## Representaciones arbóreas 
 
@@ -839,7 +839,7 @@ La FV incluye los complementos directos e indirectos del verbo. La FV también i
 \end{exe}
 ```
 
-Imagina que sólo estamos considerando la para subrayada, podemos observar que:
+Imagina que sólo estamos considerando la parte subrayada, podemos observar que:
 
 - (\ref{frase-verbal-1-a}) consta de simplement **un verbo**.
 - (\ref{frase-verbal-1-b}) consta de  **un verbo** y **un argumento**. Este único argumento es el  complemento directo.
@@ -893,7 +893,7 @@ Retomemos las oraciones anteriores, pero esta vez míremos la estructura asociad
 
 ## FV y los clíticos
 
-Recordemos los pronombres clíticos que los que hablamos en la sección (\ref{seccion-cliticos}). Los clíticos tienen una distribución muy peculiar: siempre aparecen al lado de un verbo. Intuitivamente, los clíticos parecen más parte del verbo que de los otros componentes de la FV. Por esta razón, vamos a representar a los clíticos como parte del verbo. Es decir, cuando tengamos a un clítico en una oración, vamos a combinar el núcleo verbal con el clítico para formar un **verbo complejo**. 
+Recordemos los pronombres clíticos de que los que hablamos en la sección (\ref{seccion-cliticos}). Los clíticos tienen una distribución muy peculiar: siempre aparecen al lado de un verbo. Intuitivamente, los clíticos parecen más parte del verbo que de los otros componentes de la FV. Por esta razón, vamos a representar a los clíticos como parte del verbo. Es decir, cuando tengamos a un clítico en una oración, vamos a combinar el núcleo verbal con el clítico para formar un **verbo complejo**. 
 
 Recordemos \underline{la regla de clíticos} (\ref{pronombres-5}):
 
