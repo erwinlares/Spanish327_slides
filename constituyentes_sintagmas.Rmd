@@ -145,7 +145,7 @@ Demuestra que las secuencias subrayadas en los siguientes ejemplos son constituy
 
 # La frase nominal y sus partes
 
-Los constituyentes reciben sus etiquetas de acuerdo a sus componentes. Los que tienen distribución de nombres se llaman **Frases Nominales** (FN). Una frase nominal consiste en un nombre y otros elementos como modifican a este nombre, como adjetivo, cuantificadores y determinantes.
+Los constituyentes reciben sus etiquetas de acuerdo a sus componentes. Los que tienen distribución de nombres se llaman **Frases Nominales** (FN). Una frase nominal consiste en un nombre y otros elementos que modifican a este nombre, como adjetivos, cuantificadores y determinantes.
 
 ## FN primera pasada: Nombres solos, Nombres y Adjetivos 
 
@@ -314,7 +314,7 @@ Es posible tener determinantes y cuantificadores juntos en una FN
 
 ## FN tercera pasada: coordinación
 
-Otra manera de aumentar una frade nomina (y en general cualquier otro tipo de frases) es mediante la **coordinación**. La conjunción _y_ puede formar una frase nominal compleja. Consideremos los siguientes ejemplos:
+Otra manera de aumentar una frase nominal (y en general cualquier otro tipo de frases) es mediante la **coordinación**. La conjunción _y_ y las disjunción _o_ pueden formar una frase nominal compleja. Consideremos los siguientes ejemplos:
 
 ```{=tex}
 
@@ -336,7 +336,7 @@ Otra manera de aumentar una frade nomina (y en general cualquier otro tipo de fr
 \end{exe}
 ```
 
-Vamos a representar la coordinación con una estructura **ternaria** (en oposición a binaria). Con esta estructura vamos a representar que la estructura resultante es la unión de dos partes iguales. Entonces indicaremos que la conjunción toma un elemento a la izquierda y otro a la derecha. Como los elementos son de la misma categoría sintáctica, el resultado es una frase del mismo tipo. 
+Vamos a representar la coordinación con una estructura **ternaria** (en oposición a binaria). Con esta estructura vamos a representar que la estructura resultante es la unión de dos partes iguales. Entonces indicaremos que la conjunción toma un elemento a la izquierda y otro a la derecha. Como los elementos son de la misma categoría sintáctica, el resultado es un constituyente del mismo tipo. 
 
 ```{=tex}
 
@@ -362,7 +362,7 @@ Vamos a representar la coordinación con una estructura **ternaria** (en oposici
             Juan y Pedro
             \begin{forest}
                 where n children=0{tier=word}{}
-                [N [N [Juan]][Conj [y]][FN [Pedro]]]
+                [N [N [Juan]][Conj [y]][N [Pedro]]]
             \end{forest}
             
 
@@ -502,7 +502,7 @@ Por estas razones, vamos a representar a los pronombres clíticos de manera dife
 
 # La frase preposicional 
 
-Una frase nominal requiere un elemento que vamos a llamar su **complemento**. EL complemento es típicamente un nombre o una frase nominal que aparece a la derecha de la preposición. La combinación de una preposición y su complemento forman una frase preposicional FP. Mira los ejemplos siguiente (\ref{preposiciones-1}).
+Una frase nominal requiere un elemento que vamos a llamar su **complemento**. El complemento es típicamente un nombre o una frase nominal que aparece a la derecha de la preposición. La combinación de una preposición y su complemento forman una frase preposicional FP. Mira los ejemplos siguiente (\ref{preposiciones-1}).
 
 ```{=tex}
 
@@ -560,7 +560,7 @@ Una frase nominal requiere un elemento que vamos a llamar su **complemento**. EL
             \end{forest}
             
             \ex\label{preposiciones-2-d}
-            al partido
+            sin ninguna ayuda
             \begin{forest}
                 where n children=0{tier=word}{}
                 [FP [P [sin]][FN [Cu [ninguna]][N [ayuda]]]]
@@ -570,7 +570,7 @@ Una frase nominal requiere un elemento que vamos a llamar su **complemento**. EL
 \end{exe}
 ```
 
-En general las estructuras de las FP no serás más complicadas de lo que se aprecia en (\ref{preposiciones-2}). Sin embargo, hay casos donde modificamos FFPP con adverbios en construcciones que llamamos _intensificadores de grado_ o _focalizadores_, como se muestra en el ejemplo (\ref{preposiciones-3}).
+En general las estructuras de las FP no serás más complicadas de lo que se aprecia en (\ref{preposiciones-2}). Sin embargo, hay casos donde modificamos las FFPP con adverbios en construcciones que llamamos _intensificadores de grado_ o _focalizadores_, como se muestra en el ejemplo (\ref{preposiciones-3}).
 
 ```{=tex}
 
@@ -595,16 +595,16 @@ Los adverbios intensificadores y focalizadores cumplen, para las FP, un papel an
 
 ## Lista de adverbios intensificadores y focalizadores
 
-- Intensificadores: muy, mucho, un poco, poco, bastante, demasiado, más, menos, tan, completemente, parcialmente, extremadamente, y otros.
+- Intensificadores: muy, mucho, un poco, poco, bastante, demasiado, más, menos, tan, completamente, parcialmente, extremadamente, y otros.
 - Focalizadores: casi, justo, precisamente, solo, solamente 
 
 ### Práctica:
 
-Completa el árbol sintáctico de las FP en (\ref{preposiciones-3}).
+Completa el árbol sintáctico de las FFPP en (\ref{preposiciones-3}).
 
 ## La FP -- usos
 
-Las FFPP se pueden utilizar para introducir poseedores, ubicaciones, y otros tipos de relaciones semánticas. Uno de los usos más comunes para las FFPP es modificar los nombres dentro de una FN. Considerenos, por ejemplo, las oraciones en (\ref{preposiciones-4}). **En particular**, piensa por qué (\ref{preposiciones-4-c}) y (\ref{preposiciones-4-d}) no tienen la misma representación. 
+Las FFPP se pueden utilizar para introducir poseedores, ubicaciones, y otros tipos de relaciones semánticas. Uno de los usos más comunes para las FFPP es modificar los nombres dentro de una FN. Consideremos, por ejemplo, las oraciones en (\ref{preposiciones-4}). **En particular**, piensa por qué (\ref{preposiciones-4-c}) y (\ref{preposiciones-4-d}) no tienen la misma representación. 
 
 ```{=tex}
 
@@ -672,7 +672,7 @@ Como se había mencionada antes, se puede coordinar todo tipo de frases, incluye
 
 # La frase adverbial y sus partes 
 
-Los adverbios forman frases adverbiales (FAdv). Muchas frases adverbiales toman una frase preposicional como complemente. La FP más utilizada de esta manera generalmente tiene la preposición **"de"**. Desde un punto de vista funcional, las FFAdvs añaden este tipo de información a la oración en la cual aparecen: _manera_ (cómo), _lugar_ (dónde), _tiempo_ (cuándo), y _razón_ (porqué).
+Los adverbios forman frases adverbiales (FAdv). Muchas frases adverbiales toman una frase preposicional como complemento. La FP más utilizada de esta manera generalmente tiene la preposición **"de"**. Desde un punto de vista funcional, las FFAdvs añaden este tipo de información a la oración en la cual aparecen: _manera_ (cómo), _lugar_ (dónde), _tiempo_ (cuándo), y _razón_ (porqué).
 
 ```{=tex}
 
@@ -751,6 +751,11 @@ Al igual que con las preposiciones, los adverbios también pueden modificarse co
     \end{xlist} % end first embedding
 \end{exe}
 ```
+
+Cuando tenemos una structura que contiene un intensificador de grado o un focalizador que modifica a otro adversio, utilizaremos las siguientes etiquetas para distinguir el adverbio que forma el núcleo de la expresión. 
+
+- Adv~grad~: adverbio que funciona como intensificador de grado. Modifica a otro adverbio o adjetivo a lo largo de una escala. 
+- Adv~foc~: adverbio que funciona como focalizador y que modifica a otro adverbio o adjetivo. 
 
 ### Práctica
 
@@ -882,7 +887,7 @@ Retomemos las oraciones anteriores, pero esta vez míremos la estructura asociad
             $\newline$
             \begin{forest}
                 where n children=0{tier=word}{}
-                [FV [FV [FV [FV [V [vio]][FN [D [una]][N [película]]]][FAdv [Adv [ayer]]]][FP [P [con]][FN [D [su]][N [amigo]]]]][FP [P [en]][FN [D [el]][N [cine]]]]]
+                [FV [FV [FV [FV [V [vio]][FN [D [una]][N [película]]]][Adv [ayer]]][FP [P [con]][FN [D [su]][N [amigo]]]]][FP [P [en]][FN [D [el]][N [cine]]]]]
             \end{forest}      
             
     \end{xlist} % end first embedding
