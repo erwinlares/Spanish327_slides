@@ -1,0 +1,1037 @@
+---
+title: "La oración simple"
+author: "Erwin Lares"
+date: "Created: 20 Oct 2021 | Last Updated: `r format(Sys.time(), '%d %B %Y')`"
+output:
+  bookdown::pdf_document2: default
+abstract: "Este material nos va a ayudar a identificar al sujeto, al objeto directo y al objeto indirecto en una oración. Una vez que podamos intentificar los argumentos con precisión, pasaremos a la estructura de la oración en español."
+header-includes:
+- \usepackage{graphicx}
+- \usepackage{float}
+- \usepackage{longtable}
+- \usepackage{gb4e} \noautomath % for glosses.without this it won't compile!!!
+- \usepackage{ragged2e}
+- \usepackage{tikz-qtree} %for simple tree syntax
+- \usepackage[linguistics]{forest}
+- \usepackage{setspace}\doublespacing
+- \usepackage{inputenc}
+- \usepackage{indentfirst}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      include = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE)
+
+library(tidyverse)
+library(kableExtra)
+library(tinytex)
+library(rmarkdown)
+library(bookdown)
+library(knitr)
+```
+
+# Funciones gramaticales 
+
+Hay **tres** funciones gramaticales fundamentales asociadas con los verbos: el sujeto, el objeto directo (OD) y el objeto indirecto (OI). Los objetos también son conocidos como complementos. 
+
+# Cómo identificar al sujeto
+
+Éstas son los tres criterios en los que vamos a apoyarnos para identificar cuál es el sujeto de un verbo.  
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-sujetos-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-sujetos-1-a}
+        El sujeto se expresa como una FN, un pronombre tónico nominativa o un pronombre nulo que corresponde a un sujeto implícito.
+        
+        \ex\label{criterios-sujetos-1-b}
+        El sujeto concuerda en persona y número con el verbo.
+
+        \ex\label{criterios-sujetos-1-c}
+        Un sujeto sujeto que una FN o un pronombre nulo puede ser sustuído con un pronombre tónico nominativo.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+En (\ref{criterios-sujetos-2}), podemos observar la aplicación de( \ref{criterios-sujetos-1-a}).
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-sujetos-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-sujetos-2-a}
+        \underline{La profesora} estudia literatura $\rightarrow$ sujeto = FN
+        
+        \ex\label{criterios-sujetos-2-b}
+        \underline{Tú} estudias literatura $\rightarrow$ pronombre nominativo tónico, tú (2s)
+
+        \ex\label{criterios-sujetos-2-c}
+        Estudio literatura $\rightarrow$ pronombre nulo o implícito (pro)
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+Entonces, en (\ref{criterios-sujetos-2}) podemos ver que cada sujeto concuerda en número y persona con el verbo. 
+
+- Para (\ref{criterios-sujetos-2-a}) el verbo es 3ra persona singular.
+- Para (\ref{criterios-sujetos-2-b}) el verbo es 2da persona singular.
+- Para (\ref{criterios-sujetos-2-c}) el verbo es 1ra persona singular. 
+
+Podemos utilizar los mismos ejemplos para verificar el criterio (\ref{criterios-sujetos-2-c}).
+
+- Para (\ref{criterios-sujetos-2-a}), _la profesora_ se puede sustituir por el pronombre tónico nominativo _ella_.
+- Para (\ref{criterios-sujetos-2-c}), se puede expresar el sujeto con el pronombre tónico nominativo _yo_.
+
+## El inglés vs el español: pronombres nulos.
+
+Una diferencia dramática entre el español y el inglés tiene que ver con los pronombres nulos.. El español no obliga a que los sujetos tengan que ser mencionados explícitamente. En (\ref{criterios-sujetos-3}), podemos ver que los sujetos son todos nulos o implícitos y se ven marcados en el verbo por medio de la conjugación.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-sujetos-3}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-sujetos-3-a}
+        Bailamos cada noche.
+        
+        \ex\label{criterios-sujetos-3-b}
+        Llegaron ayer.
+
+        \ex\label{criterios-sujetos-3-c}
+        Tengo dos perros.
+        
+        \ex\label{criterios-sujetos-3-d}
+        Eres mi amigo.
+        
+        \ex\label{criterios-sujetos-3-e}
+        Sonrió.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+La pregunta clave es ... ¿cómo representamos los sujetos nulos? Una posible solución consiste en asumir que cada pronombre nominativo tiene una contraparte muda (=silent) con los mismo rasgos flexivos^[¿qué son rasgos flexivos?]. Intuitivamente, la idea es que gracias a los rasgos marcados en la conjugación, los hablantes tienen suficiente información para interpretar quién es el sujeto, aunque este no se pronuncie. Revisa la Tabla \@ref(tab:pronombres-table) donde vemos cómo vamos a relacionan los pronombres tónicos nominales con los correspondientes pronombres nulos.
+
+```{r, pronombres-table}
+
+protab <- tibble(pro_explicit = c("yo, 1ra persona singular nominativa",
+                                  "tú, 2da persona singular nominativa",
+                                  "usted, 2da persona singular nominativa",
+                                  "él/ella/ello, 3ra persona singular nominativa",
+                                  "nosotros/nosotras, 1ra persona plural nominativa",
+                                  "vosotros/vosotras, 2da persona plural nominativa",
+                                  "ustedes, 2da persona plural nominativa",
+                                  "ellos/ellas, 3ra persona plural nominativa"),
+                 pro_implicit = c("pro.1s, 1ra persona singular nominativa",
+                                  "pro.2s, 2da persona singular nominativa",
+                                  "pro.2s, 2da persona singular nominativa",
+                                  "pro.3s, 3ra persona singular nominativa",
+                                  "pro.1p, 1ra persona plural nominativa",
+                                  "pro.2p, 2da persona plural nominativa",
+                                  "pro.2p, 2da persona plural nominativa",
+                                  "pro.3p, 3ra persona plural nominativa"))
+
+protab %>%
+kable(format = "latex",
+      booktabs = TRUE,
+      caption = "Pronombred nominativos y sus pros correspondientes",
+      col.names = NULL) %>% 
+ kable_styling(latex_options = c("striped",
+                                 font_size = 10,
+                                 "H")) |> 
+add_header_above(c("Pronombre explícito","Pronombre nulo"))
+```
+
+Consecuentemente, las oraciones en (\ref{criterios-sujetos-3}) pueden ser reescritas como (\ref{criterios-sujetos-4})
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-sujetos-4}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-sujetos-4-a}
+         pro.1p Bailamos cada noche.
+        
+        \ex\label{criterios-sujetos-4-b}
+        pro.3p Llegaron ayer.
+
+        \ex\label{criterios-sujetos-4-c}
+        pro.1s Tengo dos perros.
+        
+        \ex\label{criterios-sujetos-4-d}
+        pro.2s Eres mi amigo.
+        
+        \ex\label{criterios-sujetos-4-e}
+        pro.3s Sonrió.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+Esta idea de sujetos nulos se extiende a las oraciones impersonales. En una lengua como el inglés, que no tiene sujetos nulos, se usan pronombres como _it_ o _there_ para ocupar las posición de sujeto en las construcciones impersonales como las que se muestra en (\ref{impersonales-1})
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{impersonales-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{impersonales-1-a}
+         It's cold.
+        
+        \ex\label{impersonales-1-b}
+        It's important to be punctual.
+
+        \ex\label{impersonales-1-c}
+        There is a wolf outside.
+        
+        \ex\label{impersonales-1-d}
+        It smells funny in here.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+En español, por otra parte, las oraciones siempre tienen pronombres nulos. Estos pueden ser de tercera persona singular o de tercera persona plural, como se ve en (\ref{impersonales-2})
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{impersonales-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{impersonales-2-a}
+         pro.3s Hace frío.
+        
+        \ex\label{impersonales-2-b}
+        pro.3s Es importante ser puntual.
+
+        \ex\label{impersonales-2-c}
+        pro.3s Está lloviendo.
+        
+        \ex\label{impersonales-2-d}
+        pro.3p Llaman a la puerta.
+        
+        \ex\label{impersonales-2-e}
+        pro.3s Hubo un accidente en el campus.
+        
+        \ex\label{impersonales-2-f}
+        pro.3s Parece que va a venir a la fiesta.
+        
+        \ex\label{impersonales-2-g}
+        pro.3s Se come bien en este pueblo.
+        
+        \ex\label{impersonales-2-h}
+        pro.3s Se hablo de la nueva propuesta.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+## El español vs el inglés: posición del sujeto 
+
+Otra diferencia notable entre las dos lenguas tiene que ver con las posibles posiciones que el sujeto puede ocupar en una oración. En inglés, los sujetos casi siempre aparecen antes del verbo. En español, observamos que es no es el caso. Podemos ver que en (\ref{posicion-sujeto-1}), el pronombre **tú** concuerda en \underline{número y persona}: es 2da persona singular; tiene caso nominativo: es **tú**, no **te**. Consecuentemente, es el sujeto. Lo interesante (frustrante?) es que puede aparecer básicamente cn cualquier posición con respecto a la FV _compraste estas verduras_
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{posicion-sujeto-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{posicion-sujeto-1-a}
+         Tú compraste estas verduras.
+        
+        \ex\label{posicion-sujeto-1-b}
+        Compraste estas verduras tú
+
+        \ex\label{posicion-sujeto-1-c}
+        Compraste tú estas verduras.
+        
+        \ex\label{posicion-sujeto-1-d}
+        Estas verduras las compraste tú.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+En (\ref{posicion-sujeto-1-a}) va antes de la FV y en (\ref{posicion-sujeto-1-b}) va después. En (\ref{posicion-sujeto-1-c}) y (\ref{posicion-sujeto-1-d}) aparece entre dos elementos de la FV, a saber el núcleo y el complemento directo. Es importante notar que estas oraciones se pueden usar para describir el mismo evento, pero se usan para contestar preguntas diferentes sobre este evento. No vamos a adentrarnos ahora en los matices contextuales que influyen en el orden adecuado de palabras, pero se podría pensar que siempre es cuestión de “énfasis” en términos no técnicos. 
+
+### Práctica - ¿cuál es el sujeto de cada oración?
+
+Vamos a practicar con la identificación de sujetos en las siguientes oraciones (\ref{posicion-sujeto-2}). ¿Cuál es el sujeto en cada caso? Indica si es una FN o pronombre tónico nominativo. ¿Qué nos muestran estos ejemplos sobre la posición del sujeto en español? ¿Es una posición fija o variable?
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{posicion-sujeto-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{posicion-sujeto-2-a}
+         Te gusto yo.
+        
+        \ex\label{posicion-sujeto-2-b}
+        El jefe mandó las cartas a la secretaria.
+
+        \ex\label{posicion-sujeto-2-c}
+        El problema eres tú, no ella.
+        
+        \ex\label{posicion-sujeto-2-d}
+        Rompió los juguetes ese niño travieso.
+        
+        \ex\label{posicion-sujeto-2-e}
+        Llegaron los jugadores de Madrid.
+        
+        \ex\label{posicion-sujeto-2-f}
+        Le gustas a Rodrigo.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+### Práctica individual 
+
+Identifica al sujeto de cada oración de abajo. Indica si es una FN, un pronombre nominativo expreso o un pronombre nominativo nulo.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{posicion-sujeto-3}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{posicion-sujeto-3-a}
+         Nacieron las gemelas ayer 
+        
+        \ex\label{posicion-sujeto-3-b}
+        Me gusta el chocolate.
+
+        \ex\label{posicion-sujeto-3-c}
+        No te veo.
+        
+        \ex\label{posicion-sujeto-3-d}
+        Él vive en California.
+        
+        \ex\label{posicion-sujeto-3-e}
+        Eres alta.
+        
+        \ex\label{posicion-sujeto-3-f}
+        Está nevando.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+# El objeto directo
+
+Podemos identificar el objeto directo utilizando los siguientes criterios:
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OD-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OD-1-a}
+        El objeto directo se expresa como un clítico acusativo, una FN o una FP que lleva la a personal.
+        
+        \ex\label{criterios-OD-1-b}
+        Un objecto directo que es una FN o una FP que lleva la a persona se puede sustituir con un clítico acusativo.
+
+        \ex\label{criterios-OD-1-c}
+        El objeto directo de un verbo activo se puede convertir en el sujeto de una construcción pasiva.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+Aplicando los criterios (\ref{criterios-OD-1}) uno a uno, podemos ver en (\ref{criterios-OD-2})
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OD-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OD-2-a}
+        Juan \underline{la} vio. $\rightarrow$ OD = clítico acusativo \textbf{la}
+        
+        \ex\label{criterios-OD-2-b}
+        Juan vio \underline{la película}. $\rightarrow$ OD = FN \textbf{la película}
+
+        \ex\label{criterios-OD-2-c}
+        Juan vio \underline{a su hermana}. $\rightarrow$ OD = FP con a personal \textbf{a su hermana}
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+Los objetos que son frases (FN o FP) tienden a seguir el verbo, así que no presentan la variabilidad de posición que vimos con los sujetos. Pasando ahora a criterio (\ref{criterios-OD-1-b}), podemos ver que una frase que funciona como objeto directo se puede sustituir con un clítico acusativo. Esto aplica sin importar si es una FP, como en (\ref{criterios-OD-3-a}) o una FN como en (\ref{criterios-OD-3-b}).
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OD-3}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OD-3-a}
+        Conocimos al director $\rightarrow$ \underline{Lo} conocimos.
+        
+        \ex\label{criterios-OD-3-b}
+        Yo tengo \underline{la pluma}. $\rightarrow$ Yo \underline{la} tengo.
+
+
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+## El OD y la voz pasiva{#OD-voz-pasiva}
+
+El último criterio es un poco más sutil y difícil de aplicar, pero es una excelente prueba para dilucidar si un argumento es un objeto directo. Para entender cómo funciona, tenemos que entender a relación entre la _voz activa_ y la _voz pasiva_. Para comenzar, consideremos (\ref{criterios-OD-4})
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OD-4}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OD-4-a}
+        Nosotros pintamos la casa $\rightarrow$ Voz activa con el verbo \underline{pintar}
+        
+        \ex\label{criterios-OD-4-b}
+        La casa fue pintada por nosotros. $\rightarrow$ Voz pasiva con el verbo \underline{pintar}
+
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+La oración en voz activa con un verbo como _pinta_, tiene prototípicamente un _sujeto_,  con función de _agente_ y un objeto directo, que funciona como _paciente_. La transformación a voz pasiva lleva a cabo los siguientes cambios: 
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{trx-voz-pasiva-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{trx-voz-pasiva-1-a}
+        verbo léxico conjugado $\rightarrow$ verb auxiliar \textit{ser} + participio pasado del verbo léxico.
+        
+        \ex\label{trx-voz-pasiva-1-b}
+        sujeto del verbo léxico conjugado $\rightarrow$ complemento de un FP emcabezada por \textit{por} 
+   
+        \ex\label{trx-voz-pasiva-1-c}
+        objeto directo del verbo léxico conjugado $\rightarrow$ sujeto de la oración
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+**Moraleja**: La voz pasiva es una transformación que solamente puede aplicarse a un verbo activo con un objeto directo. Estos verbos, que tienen un objeto directo, se llaman **transitivos**.
+
+### Tarea: Convierte las oraciones activas a la voz pasiva y las oraciones pasivas a la voz activa. Revisaremos las respuestas en clase.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{practiva-voz-activa-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{practiva-voz-activa-1-a}
+        Cervantes escribió \textit{El Quijote}.
+        
+        \ex\label{practiva-voz-activa-1-b}
+        Muchas personas odian al presidente.
+   
+        \ex\label{practiva-voz-activa-1-c}
+        Los investigadores crearán un sistema nuevo.
+        
+        \ex\label{practiva-voz-activa-1-d}
+        Los bárbaros destruyeron la ciudad.
+        
+        \end{xlist} % end first embedding
+\end{exe}
+
+\singlespacing
+
+\begin{exe} %first level (1)
+    \ex\label{practica-voz-pasiva-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{practica-voz-pasiva-1-a}
+        El edificio fue diseñado por Frank Lloyd Wright.
+        
+        \ex\label{practica-voz-pasiva-1-b}
+        El dictador es temido por la población.
+   
+        \ex\label{practica-voz-pasiva-1-c}
+        La clase será cancelada por el profesor.
+        
+        \ex\label{practica-voz-pasiva-1-d}
+        Fuimos invitados a la fiesta por Ana.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+## Practica: Identifica el objeto directo y utiliza un criterio para apoyar tu respuesta.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OD-5}
+    \begin{xlist} %second level (1.a) 
+        \ex\label{criterios-OD-5-a}
+        Lo llevo yo.
+        
+        \ex\label{criterios-OD-5-b}
+        Compre las verduras.
+
+        \ex\label{criterios-OD-5-c}
+        Mi amiga visitó a su abuela.
+        
+        \ex\label{criterios-OD-5-d}
+        Me regañaron mis papás
+
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+# El objeto indirecto
+
+Podemos identificar el objeto indirecto utilizando los siguientes criterios:
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OI-1}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OI-1-a}
+        El objeto indirecto se express como un clítico dativo o una FP que lleva una a como núcleo. El clítico dativo suele aparecer junto con la FP en \textbf{reduplicación}.
+        
+        \ex\label{criterios-OI-1-b}
+        Un objecto indirecto de un verbo \textbf{no} puede convertirse en el sujeto de la voz pasiva.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+Aplicando los criterios (\ref{criterios-OI-1}) uno a uno, podemos ver en (\ref{criterios-OI-2})
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OI-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OI-2-a}
+        \underline{le} envié una carta. $\rightarrow$ OI = clítico acusativo \textbf{le}
+        
+        \ex\label{criterios-OI-2-b}
+        Envié una carta \underline{a mi hermana}. $\rightarrow$ OI = FP encabezada por \underline{a}
+
+        \ex\label{criterios-OI-2-c}
+        \underline{Le} envié una carta \underline{a mi hermana}. $\rightarrow$ OI = reduplicación + FP encabezada por \underline{a}
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+Por lo general, el objeto indirecto se expresa más comúnmente como un clítico (\ref{criterios-OI-2-a}) o la duplicación de un clítico y la FP (\ref{criterios-OI-2-c}). La expresión del objeto indirecto como una FP sola (\ref{criterios-OI-2-b}) es posible para unos verbos y no otros. A continuación, se presentarán unas clases de verbos que llevan objetos indirectos y las estrategias de expresión.
+
+```{r, OI-table}
+
+OItab <- tibble(clase = c("El OI gana posesión de algo",
+                          "El OI es poseedor de una parte del cuerpo o ropa",
+                          "El OI es el recipiente del habla o de un gesto",
+                          "El OI pierde la posesión de algo",
+                          "El OI experimenta una sensación emocional o cognitiva"),
+                ejemplos = c("dar, enviar, mandar, regalar, donar,  vender, comprar, hacer, encontrar, buscar, etc.",
+                             "lavar, poner, doler, rascar, etc.",
+                             "decir, hablar, gritar, sonreír, etc.",
+                             "robar, quitar, etc.",
+                             "gustar, interesar, aburrir, importar, etc."),
+                estrategia = c("Clítico dativo, clítico dativo + FP (FP sola es posible para unos verbos como vender, regalar, enviar, donar)",
+                               "Clítico dativo, clítico dativo + FP",
+                               "Clítico dativo, clítico dativo + FP (FP sola es posible para unos verbos como hablar)",
+                               "Clítico dativo, clítico dativo + FP",
+                               "Clítico dativo, clítico dativo + FP"))
+
+OItab %>%
+kable(format = "latex",
+      booktabs = TRUE,
+      caption = "Pronombred nominativos y sus pros correspondientes",
+      col.names = NULL) %>% 
+ kable_styling(latex_options = c("striped",
+                                 font_size = 10,
+                                 "H", 
+                                 "scale_down")) |> 
+add_header_above(c("Clase de OI","Ejemplos de verbos", "Estrategia de expresión")) |> 
+    column_spec(1, width = "2in") %>% 
+    column_spec(2, width = "2.5in") %>% 
+    column_spec(3, width = "3in")
+```
+
+Estudia con detenimiento los ejemplos a continuación donde se ilustran los diversos usos de los OOII en español. 
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OI-3}
+    Ejemplos de OOII expresados como clíticos dativos.
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OI-3-a}
+        \underline{Te} mandé la información por correo. $\rightarrow$ gana posesión de la información.
+        
+        \ex\label{criterios-OI-3-b}
+        \underline{Me} lavo las manos mucho. $\rightarrow$ Poseedor de la parte del cuerpo: manos.
+
+        \ex\label{criterios-OI-3-c}
+        \underline{Les} dije la verdad. $\rightarrow$ destinatario de lo que se dijo
+        
+        \ex\label{criterios-OI-3-d}
+        \underline{Nos} robaron el carro. $\rightarrow$ Pérdida de la posesión del carro.
+        
+        \ex\label{criterios-OI-3-e}
+        \underline{Le} interesa la química. $\rightarrow$ Experimenta una sensación cognitiva.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OI-4}
+    Ejemplos de OOII expresados con duplicación (clítico + FP).
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OI-4-a}
+        \underline{Les} mandé la información \underline{a los alumnos} por correo
+        
+        \ex\label{criterios-OI-4-b}
+        \underline{Le} lavo las manos \underline {a mi hija} todas las noches.
+
+        \ex\label{criterios-OI-4-c}
+        Siempre \underline{Les} les digo la verdad \underline{a mis clientes}.
+        
+        \ex\label{criterios-OI-4-d}
+        \underline{Le} robaron el carro \underline{a Ana}.
+        
+        \ex\label{criterios-OI-4-e}
+        \underline{A Patricia} \underline{Le} interesa la química.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{criterios-OI-5}
+    Ejemplos de OOII expresados con una FP únicamente (estrategia menos común).
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{criterios-OI-5-a}
+        Mandé la información \underline{a los alumnos}.
+        
+        \ex\label{criterios-OI-5-b}
+        Hablamos \underline{al director} sobre los resultados de los exámenes.
+
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+## El OI y la voz pasiva
+
+En adición a las formas y a los significados que tienen las oraciones con objetos indirectos, otro criterio útil a la hora de discernir entre uno u otro tipo de objeto es la voz pasiva. Contrario a los OODD, los OOII **no pueden convertirse en el sujeto de las construciones pasivas**. 
+
+Para recordar, en la Sección \ref{OD-voz-pasiva} descubrimos que el OD de un verbo transitivo se convierte en el sujeto de la oración pasiva. Consideremos entonces (\ref{voz-pasiva-2}).
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{voz-pasiva-2}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{voz-pasiva-2-a}
+        Mis papás \underline{me} regañaron.
+        
+        \ex\label{voz-pasiva-2-b}
+        \underline{Yo} fui regañado por mis papás.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+
+Como se puede observar en (\ref{voz-pasiva-2}), el hecho de que el clítico acusativo _me_ en (\ref{voz-pasiva-2-a}) corresponde al mismo referente del pronombre nominal _yo_ en (\ref{voz-pasiva-2-b}), se toma como evidencia de que el _me_ en (\ref{voz-pasiva-2-a}) corresponde al OD. Al comparar estos resultados con (\ref{voz-pasiva-3}), vemos que no podemos hacer la misma transformación con el clítico _me_ y este es el OI de un verbo como _enviar_.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{voz-pasiva-3}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{voz-pasiva-3-a}
+        Mis papás \underline{me} enviaron el dinero
+        
+        \ex\label{voz-pasiva-3-b}
+        *\underline{Yo} fui enviardo el dinero por mis papás.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+(\ref{voz-pasiva-3-b}) es inaceptable y es, efectivamente, el resultado que esperamos al aplicar la prueba de voz pasiva a un objeto indirecto. Los resultados negativos de la voz pasiva se aplican a todos las clases de verbos que tienen objetos indirectos. Estudia los ejemplos en (\ref{voz-pasiva-4}).
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{voz-pasiva-4}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{voz-pasiva-4-a}
+        \underline{Les} la información \underline{a los alumnos por correo} $\rightarrow$ *Los alumnos fueron mandados la información por mí por correo.
+        
+        \ex\label{voz-pasiva-4-b}
+        \underline{Les} doy comida \underline{a mis perros} cada día $\rightarrow$ *Mis perros son dados comida por mí cada día.
+        
+        \ex\label{voz-pasiva-4-c}
+        \underline{A Teresa le} interesa la computación $\rightarrow$ *Teresa es interesada por la química.
+        
+        \ex\label{voz-pasiva-4-d}
+        Siempre \underline{les} digo la verdad \underline{a mis clientes} $\rightarrow$ *Mis clientes son siempre dichos la verdad por mí. 
+
+        \ex\label{voz-pasiva-4-e}
+        \underline{Le} robaron el carro \underline{a Juan}  $\rightarrow$ *Juan fue robado el carro por ellos.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+## Construcciones con ambos OODD & OOII
+
+### Caso 1
+Generalmente, los OOII aparecen con OODD. En estas construcciones, el OI suele poseer el objeto OD. Recordemos cómo se manifiestan los objetos directos e indirectos en una oración. 
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-1}
+    Dos clíticos $\rightarrow$ orden: OI -- OD 
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-1-a}
+        \underline{Te} mandé \underline{la información} por correo $\rightarrow$ \underline{Te la} mandé por correo.
+        
+        \ex\label{OODD-OOII-1-b}
+         \underline{Me} lavo \underline{las manos} mucho $\rightarrow$ \underline{Me las} lavo mucho.
+         
+        \ex\label{OODD-OOII-1-c}
+         \underline{Les} dije \underline{la verdad} $\rightarrow$ \underline{Se la} dije.
+        
+        \ex\label{OODD-OOII-1-d}
+         \underline{Nos} prestaron \underline{las tiendas de campaña} $\rightarrow$ \underline{Nos las} prestaron.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+OJO: Si el OI es _le_ o _les_ y el OD es _lo/la/los/las_, el OI tiene que cambiar a _se_ como en el ejemplo (\ref{OODD-OOII-1-c}). 
+
+### Caso 2 
+
+Si el OI es una FP siempre sigue al OD.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-2}
+    Dos frases $\rightarrow$ orden: OD (FN) -- OI (FP)
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-2-a}
+        \underline{Les} mandé \textbf{la información} \underline{a los alumnos} por correo.
+        
+        \ex\label{OODD-OOII-2-b}
+        \underline{Les} doy \textbf{comida} \underline{a mis perros} todos los días.
+         
+        \ex\label{OODD-OOII-2-c}
+        Siempre \underline{les} digo \textbf{la verdad} \underline{a mis clientes}.
+        
+        \ex\label{OODD-OOII-2-d}
+        \underline{Nos} prestaron \textbf{las tiendas de campaña} \underline{a nosotros}.
+        
+    \end{xlist} % end first embedding
+\end{exe}
+\doublespacing
+```
+
+### Caso 3
+
+No hay un OD, simplemente un sujeto y un OI. Para estas construcciones, hay dos posibilidades. 
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-3}
+    Posibilidad 1 $\rightarrow$ orden: sujeto -- clítico+verbo -- OI
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-3-a}
+        Nosotros le hablamos a Juan.
+        \ex\label{OODD-OOII-3-b}
+        Yo siempre le sonrió a la gente.
+        
+    \end{xlist} % end first embedding
+    
+    
+    \ex\label{OODD-OOII-4}
+    Posibilidad 2 $\rightarrow$ orden: OI -- clítico+verbo -- Sujeto
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-4-a}
+        A Juan le duelen los pies.
+        \ex\label{OODD-OOII-4-b}
+        A mi gustan los cuentos de Cortázar.
+        
+    \end{xlist} % end first embedding
+    
+\end{exe}
+\doublespacing
+```
+
+Los verbos que describen acciones de hablar o mandar gestos tienen un orden típico de sujeto – verbo – objeto indirecto. Por otro lado, los verbos que tienen poseedores de partes del cuerpo como doler o que describen experiencias como gustar tienen un orden básico al revés – el objeto directo va primero y el sujeto va al final.
+
+# El Juego del Calamar Lingüístico: sujeto vs OD vs OI
+
+Lo más útil de estos criterios es que nos da una manera de identificar al sujeto y a los objetos directo e indirecto sin tener que adivinar. La tabla 3 es un resumen de las características de cada función gramatical. Entonces a manera de resumen: 
+
+- **Sujeto**
+    - Puede ser un pronombre tónico nominativo, una FN, o un pronombre nulo _pro_.
+    - Concuerda en número y persona con el verbo.
+- **OD**
+    - Puede ser un clítico (pronombre átono) acusativo, una FN, o una FP encabezada por la _a_ personal.
+    - Puede convertise en el sujeto de la construcción pasiva.
+- **OI**
+    - Puede ser un clítico dativo o una FP encabezada por _a_.
+    - **NO PUEDE** convertirse en el sujeto de la construcción pasiva.
+    
+## Práctica 
+
+Utilicemos TODO lo aprendido hasta ahora para analizar la siguientes oración:
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-5}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-5-a}
+        El maestro le quitó el teléfono al estudiante.
+    
+    \end{xlist}
+\end{exe}
+\doublespacing
+```
+
+### El sujeto
+
+Empezamos con el sujeto. Se puede decir que el maestro es el sujeto por las siguientes razones. Primero, el maestro es una FN que se puede sustituir por un pronombre tónico nominativo – él, como se puede ver en (\ref{OODD-OOII-6-a}). Segundo, el maestro concuerda en persona y número con el verbo. Si cambiáramos el maestro a los maestros, como en (OODD-OOII-6-b), el verbo tiene que cambiar a 3^a^ persona plural para reflejar este cambio, sirviendo como una indicación de el maestro es el sujeto.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-6}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-6-a}
+        \underline{El maestro} le quitó el teléfono al estudiante. $\rightarrow$ \underline{Él} le quitó el teléfono al estudiante
+    
+        \ex\label{OODD-OOII-6-b}
+        El maestro le quitó el teléfono al estudiante.
+    
+    \end{xlist}
+\end{exe}
+\doublespacing
+```
+
+### EL OD
+
+Ahora pasamos al objeto directo. Se puede decir que el teléfono es el objeto directo porque es una FN que se puede sustituir por un clítico acusativo, lo. Esta sustitución provoca el cambio de le a se, como se puede ver en (\ref{OODD-OOII-7-a}). En segundo lugar, el teléfono puede convertirse en el sujeto de la voz pasiva en (\ref{OODD-OOII-7-b}).
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-7}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-7-a}
+        El maestro le quitó \underline{el teléfono} al estudiante. $\rightarrow$ El maestro se \underline{lo} quitó al estudiante
+    
+        \ex\label{OODD-OOII-7-b}
+        El maestro le quitó el \underline{teléfono} al estudiante. \underline{El teléfono} le fue quitado al estudiante por el maestro.
+    
+    \end{xlist}
+\end{exe}
+\doublespacing
+```
+
+### EL OI
+
+Finalmente, vamos a aplicar los criterios del objeto indirecto a el estudiante. Se sabe que es el objeto indirecto porque se expresa con la combinación del clítico dativo le y la FP al estudiante. En cuanto al significado, se ve que el estudiante tiene una interpretación típicamente asociada con los objetos indirectos – un poseedor. En este ejemplo, pierde posesión del objeto directo. Por último, se aplicamos la prueba de la voz pasiva, vemos que el estudiante no puede convertirse en el sujeto de la voz pasiva.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-8}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-8-a}
+        El maestro \underline{le} quitó \underline{el teléfono} al estudiante. $\rightarrow$ *\underline{El} estudiante fue quitado el teléfono por el maestro.
+    
+    \end{xlist}
+\end{exe}
+\doublespacing
+```
+
+### Carpintería
+
+Cabe notar que no todos los criterios se pueden aplicar a todos los verbos para identificar a un objeto directo o indirecto. Por ejemplo, hay unos verbos transitivos que tienen objetos directos, pero que no tienen una versión pasiva. Por ejemplo, el verbo tener no se usa en voz pasiva, aunque sí tiene un objeto directo.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-9}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-9-a}
+        Juan tiene la llave.
+        
+        \ex\label{OODD-OOII-9-b}
+        *La llave es tenida por Juan.
+    
+    \end{xlist}
+\end{exe}
+\doublespacing
+```
+
+La inaceptabilidad de (\ref{OODD-OOII-9-b}) no quiere decir que la llave no es un objeto directo. Al contrario, hay ciertos verbos transitivos como tener que simplemente no se usan en la voz pasiva. Se puede demostrar que sí es objeto directo la llave en (\ref{OODD-OOII-9-b}) usando la sustitución: la llave se puede sustituir por el clítico acusativo la como se muestra es (\ref{OODD-OOII-10).
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-10}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-10-a}
+        Juan tiene \underline{la llave}. $\rightarrow$ Juan \underline{la} tiene.
+    
+    \end{xlist}
+\end{exe}
+\doublespacing
+```
+
+### Práctica
+
+Identifica la función gramatical (sujeto, objeto directo u objeto indirecto) del elemento subrayado y da una razón a favor de tu respuesta.
+
+```{=tex}
+\singlespacing
+\begin{exe} %first level (1)
+    \ex\label{OODD-OOII-11}
+    \begin{xlist} %second level (1.a) 
+        
+        \ex\label{OODD-OOII-11-a}
+        Mi amigo \underline{me} gritó. (Pista: *Fui gritado por mi amigo.)
+        
+        \ex\label{OODD-OOII-11-b}
+        Canceló \underline{el decano} las clases.
+        
+        \ex\label{OODD-OOII-11-c}
+        La policia persiguió al criminal durante una hora y \underline{lo} capturó.
+
+        \ex\label{OODD-OOII-11-d}
+        \underline{Te} quiero mucho.
+        
+        \ex\label{OODD-OOII-11-e}
+        \underline{Me} arden los ojos.
+        
+        \ex\label{OODD-OOII-11-f}
+        \underline{Te} recomiendo la película \textit{Parasite}.
+        
+        \ex\label{OODD-OOII-11-g}
+        El jefe me presentó \underline{a la nueva ingeniera}.
+        
+        \ex\label{OODD-OOII-11-h}
+        Es un problema difícil, pero lo tienes que resolver \underline{tú}.
+    
+    \end{xlist}
+\end{exe}
+\doublespacing
+```
+
+# La representación de la oración simple
+
+Ahora que tenemos una idea de cómo identificar las funciones gramaticales, podemos hablar de la estructura de la oración simple. Una oración simple consiste en un sujeto y un predicado. El sujeto es, casi siempre, N o FN y el predicado es, casi siempre, un V o una FV. Para representar una oración simple, diremos que hay una etiqueta especial en el árbol sintáctico, O, que representa la unión entre el sujeto y el predicado.
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{frases-ambiguas-2}
+    El niño dibujó un gato
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{frases-ambiguas-2-a}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [O [FN [D [El]][N [niño]]][FV [V [dibujó]][FN [D [un]][N [gato]]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+La técnica para representar cualquier oración es la siguiente: 
+
+1. localizar el sujeto y localizar el predicado (verbo + objetos directo e indirecto y otros modificadores)
+2. representar la estructura interna del sujeto (N o FN) y representar la estructura interna del predicado (V o FV)
+3. unir el sujeto con el predicado con una O.
+
+## 
