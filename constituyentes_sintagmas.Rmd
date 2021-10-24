@@ -986,9 +986,9 @@ Por ejemplo, los verbos auxiliares son parte de la frase verbal. Como siempre ap
             
 ```
 
-### Práctica 
-
-Dibuja el árbol sintáctico que corresponde con cada una de las oraciones en (\ref{frase-verbal-5}).
+# Respuesta a los ejercicios 
+7.2.1
+Dibuja el árbol sintáctico que corresponde con cada una de las FFVV en (\ref{frase-verbal-5}).
 
 ```{=tex}
 
