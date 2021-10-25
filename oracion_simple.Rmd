@@ -38,7 +38,7 @@ Hay **tres** funciones gramaticales fundamentales asociadas con los verbos: el s
 
 # Cómo identificar al sujeto
 
-Éstas son los tres criterios en los que vamos a apoyarnos para identificar cuál es el sujeto de un verbo.  
+Éstos son los tres criterios en los que vamos a apoyarnos para identificar cuál es el sujeto de un verbo.  
 
 ```{=tex}
 \singlespacing
@@ -53,7 +53,7 @@ Hay **tres** funciones gramaticales fundamentales asociadas con los verbos: el s
         El sujeto concuerda en persona y número con el verbo.
 
         \ex\label{criterios-sujetos-1-c}
-        Un sujeto sujeto que una FN o un pronombre nulo puede ser sustuído con un pronombre tónico nominativo.
+        Un sujeto que es una FN o un pronombre nulo puede ser sustuído con un pronombre tónico nominativo.
         
     \end{xlist} % end first embedding
 \end{exe}
@@ -95,7 +95,7 @@ Podemos utilizar los mismos ejemplos para verificar el criterio (\ref{criterios-
 
 ## El inglés vs el español: pronombres nulos.
 
-Una diferencia dramática entre el español y el inglés tiene que ver con los pronombres nulos.. El español no obliga a que los sujetos tengan que ser mencionados explícitamente. En (\ref{criterios-sujetos-3}), podemos ver que los sujetos son todos nulos o implícitos y se ven marcados en el verbo por medio de la conjugación.
+Una diferencia dramática entre el español y el inglés tiene que ver con los pronombres nulos. El español no obliga a que los sujetos tengan que ser mencionados explícitamente. En (\ref{criterios-sujetos-3}), podemos ver que los sujetos son todos nulos o implícitos y se ven marcados en el verbo por medio de la conjugación.
 
 ```{=tex}
 \singlespacing
@@ -208,7 +208,7 @@ Esta idea de sujetos nulos se extiende a las oraciones impersonales. En una leng
 \doublespacing
 ```
 
-En español, por otra parte, las oraciones siempre tienen pronombres nulos. Estos pueden ser de tercera persona singular o de tercera persona plural, como se ve en (\ref{impersonales-2})
+En español, por otra parte, estás oraciones siempre tienen pronombres nulos. Estos pueden ser de tercera persona singular o de tercera persona plural, como se ve en (\ref{impersonales-2})
 
 ```{=tex}
 \singlespacing
@@ -385,7 +385,7 @@ Aplicando los criterios (\ref{criterios-OD-1}) uno a uno, podemos ver en (\ref{c
 \doublespacing
 ```
 
-Los objetos que son frases (FN o FP) tienden a seguir el verbo, así que no presentan la variabilidad de posición que vimos con los sujetos. Pasando ahora a criterio (\ref{criterios-OD-1-b}), podemos ver que una frase que funciona como objeto directo se puede sustituir con un clítico acusativo. Esto aplica sin importar si es una FP, como en (\ref{criterios-OD-3-a}) o una FN como en (\ref{criterios-OD-3-b}).
+Los objetos que son frases (FN o FP) tienden a seguir el verbo, así que no presentan la variabilidad de posición que vimos con los sujetos. Pasando ahora al criterio (\ref{criterios-OD-1-b}), podemos ver que una frase que funciona como objeto directo se puede sustituir con un clítico acusativo. Esto aplica sin importar si es una FP, como en (\ref{criterios-OD-3-a}) o una FN como en (\ref{criterios-OD-3-b}).
 
 ```{=tex}
 \singlespacing
@@ -438,7 +438,7 @@ La oración en voz activa con un verbo como _pinta_, tiene prototípicamente un 
         verbo léxico conjugado $\rightarrow$ verb auxiliar \textit{ser} + participio pasado del verbo léxico.
         
         \ex\label{trx-voz-pasiva-1-b}
-        sujeto del verbo léxico conjugado $\rightarrow$ complemento de un FP emcabezada por \textit{por} 
+        sujeto del verbo léxico conjugado $\rightarrow$ complemento de un FP encabezada por \textit{por} 
    
         \ex\label{trx-voz-pasiva-1-c}
         objeto directo del verbo léxico conjugado $\rightarrow$ sujeto de la oración
@@ -641,7 +641,7 @@ Estudia con detenimiento los ejemplos a continuación donde se ilustran los dive
         \underline{Le} lavo las manos \underline {a mi hija} todas las noches.
 
         \ex\label{criterios-OI-4-c}
-        Siempre \underline{Les} les digo la verdad \underline{a mis clientes}.
+        Siempre \underline{les} digo la verdad \underline{a mis clientes}.
         
         \ex\label{criterios-OI-4-d}
         \underline{Le} robaron el carro \underline{a Ana}.
@@ -674,7 +674,7 @@ Estudia con detenimiento los ejemplos a continuación donde se ilustran los dive
 
 ## El OI y la voz pasiva
 
-En adición a las formas y a los significados que tienen las oraciones con objetos indirectos, otro criterio útil a la hora de discernir entre uno u otro tipo de objeto es la voz pasiva. Contrario a los OODD, los OOII **no pueden convertirse en el sujeto de las construciones pasivas**. 
+Además de las formas y los significados que tienen las oraciones con objetos indirectos, otro criterio útil a la hora de discernir entre uno u otro tipo de objeto es la voz pasiva. Contrario a los OODD, los OOII **no pueden convertirse en el sujeto de las construciones pasivas**. 
 
 Para recordar, en la Sección \ref{OD-voz-pasiva} descubrimos que el OD de un verbo transitivo se convierte en el sujeto de la oración pasiva. Consideremos entonces (\ref{voz-pasiva-2}).
 
@@ -724,13 +724,13 @@ Como se puede observar en (\ref{voz-pasiva-2}), el hecho de que el clítico acus
     \begin{xlist} %second level (1.a) 
         
         \ex\label{voz-pasiva-4-a}
-        \underline{Les} la información \underline{a los alumnos por correo} $\rightarrow$ *Los alumnos fueron mandados la información por mí por correo.
+        \underline{Les} mandé la información \underline{a los alumnos por correo} $\rightarrow$ *Los alumnos fueron mandados la información por mí por correo.
         
         \ex\label{voz-pasiva-4-b}
         \underline{Les} doy comida \underline{a mis perros} cada día $\rightarrow$ *Mis perros son dados comida por mí cada día.
         
         \ex\label{voz-pasiva-4-c}
-        \underline{A Teresa le} interesa la computación $\rightarrow$ *Teresa es interesada por la química.
+        \underline{A Teresa le} interesa la computación $\rightarrow$ *Teresa es interesada por la computación
         
         \ex\label{voz-pasiva-4-d}
         Siempre \underline{les} digo la verdad \underline{a mis clientes} $\rightarrow$ *Mis clientes son siempre dichos la verdad por mí. 
@@ -840,7 +840,7 @@ Los verbos que describen acciones de hablar o mandar gestos tienen un orden típ
 
 # El Juego del Calamar Lingüístico: sujeto vs OD vs OI
 
-Lo más útil de estos criterios es que nos da una manera de identificar al sujeto y a los objetos directo e indirecto sin tener que adivinar. La tabla 3 es un resumen de las características de cada función gramatical. Entonces a manera de resumen: 
+Lo más útil de estos criterios es que nos da una manera de identificar al sujeto y a los objetos directo e indirecto sin tener que adivinar. Abajo puedes ver un resumen de las características de cada función gramatical. Entonces a manera de resumen: 
 
 - **Sujeto**
     - Puede ser un pronombre tónico nominativo, una FN, o un pronombre nulo _pro_.
@@ -905,7 +905,7 @@ Ahora pasamos al objeto directo. Se puede decir que el teléfono es el objeto di
         El maestro le quitó \underline{el teléfono} al estudiante. $\rightarrow$ El maestro se \underline{lo} quitó al estudiante
     
         \ex\label{OODD-OOII-7-b}
-        El maestro le quitó el \underline{teléfono} al estudiante. \underline{El teléfono} le fue quitado al estudiante por el maestro.
+        El maestro le quitó el \underline{teléfono} al estudiante. $\rightarrow$ \underline{El teléfono} le fue quitado al estudiante por el maestro.
     
     \end{xlist}
 \end{exe}
@@ -914,7 +914,7 @@ Ahora pasamos al objeto directo. Se puede decir que el teléfono es el objeto di
 
 ### EL OI
 
-Finalmente, vamos a aplicar los criterios del objeto indirecto a el estudiante. Se sabe que es el objeto indirecto porque se expresa con la combinación del clítico dativo le y la FP al estudiante. En cuanto al significado, se ve que el estudiante tiene una interpretación típicamente asociada con los objetos indirectos – un poseedor. En este ejemplo, pierde posesión del objeto directo. Por último, se aplicamos la prueba de la voz pasiva, vemos que el estudiante no puede convertirse en el sujeto de la voz pasiva.
+Finalmente, vamos a aplicar los criterios del objeto indirecto a el estudiante. Se sabe que es el objeto indirecto porque se expresa con la combinación del clítico dativo _le_ y la FP _al estudiante_. En cuanto al significado, se ve que el estudiante tiene una interpretación típicamente asociada con los objetos indirectos – un poseedor. En este ejemplo, pierde posesión del objeto directo. Por último, se aplicamos la prueba de la voz pasiva, vemos que el estudiante no puede convertirse en el sujeto de la voz pasiva.
 
 ```{=tex}
 \singlespacing
@@ -951,7 +951,7 @@ Cabe notar que no todos los criterios se pueden aplicar a todos los verbos para 
 \doublespacing
 ```
 
-La inaceptabilidad de (\ref{OODD-OOII-9-b}) no quiere decir que la llave no es un objeto directo. Al contrario, hay ciertos verbos transitivos como tener que simplemente no se usan en la voz pasiva. Se puede demostrar que sí es objeto directo la llave en (\ref{OODD-OOII-9-b}) usando la sustitución: la llave se puede sustituir por el clítico acusativo la como se muestra es (\ref{OODD-OOII-10).
+La inaceptabilidad de (\ref{OODD-OOII-9-b}) no quiere decir que la llave no es un objeto directo. Al contrario, hay ciertos verbos transitivos como tener que simplemente no se usan en la voz pasiva. Se puede demostrar que sí es objeto directo la llave en (\ref{OODD-OOII-9-b}) usando la sustitución: la llave se puede sustituir por el clítico acusativo la como se muestra es (\ref{OODD-OOII-10}).
 
 ```{=tex}
 \singlespacing
