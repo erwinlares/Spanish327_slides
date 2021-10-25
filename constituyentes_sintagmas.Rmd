@@ -1076,7 +1076,7 @@ Estás son dos imágenes muy famosas:
 \newpage
 
 ```{r, out.width="6in"}
-include_graphics("images/my-wife-and-my-mother-in-law-optical-illusion.jpeg")
+include_graphics("images/my_wife_and_my_mother_in_law.png")
 ```
 \newpage
 ```{r, out.width="6in"}
