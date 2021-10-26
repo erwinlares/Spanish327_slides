@@ -164,19 +164,19 @@ Consecuentemente, las oraciones en (\ref{criterios-sujetos-3}) pueden ser reescr
     \begin{xlist} %second level (1.a) 
         
         \ex\label{criterios-sujetos-4-a}
-         pro.1p Bailamos cada noche.
+         pro.$_{1p}$ Bailamos cada noche.
         
         \ex\label{criterios-sujetos-4-b}
-        pro.3p Llegaron ayer.
+        pro.$_{3p}$ Llegaron ayer.
 
         \ex\label{criterios-sujetos-4-c}
-        pro.1s Tengo dos perros.
+        pro.$_{1s}$ Tengo dos perros.
         
         \ex\label{criterios-sujetos-4-d}
-        pro.2s Eres mi amigo.
+        pro.$_{2s}$ Eres mi amigo.
         
         \ex\label{criterios-sujetos-4-e}
-        pro.3s Sonrió.
+        pro.$_{3s}$ Sonrió.
         
     \end{xlist} % end first embedding
 \end{exe}
@@ -217,28 +217,28 @@ En español, por otra parte, estás oraciones siempre tienen pronombres nulos. E
     \begin{xlist} %second level (1.a) 
         
         \ex\label{impersonales-2-a}
-         pro.3s Hace frío.
+         pro.$_{3s}$ Hace frío.
         
         \ex\label{impersonales-2-b}
-        pro.3s Es importante ser puntual.
+        pro.$_{3s}$ Es importante ser puntual.
 
         \ex\label{impersonales-2-c}
-        pro.3s Está lloviendo.
+        pro.$_{3s}$ Está lloviendo.
         
         \ex\label{impersonales-2-d}
-        pro.3p Llaman a la puerta.
+        pro.$_{3p}$ Llaman a la puerta.
         
         \ex\label{impersonales-2-e}
-        pro.3s Hubo un accidente en el campus.
+        pro.$_{3s}$ Hubo un accidente en el campus.
         
         \ex\label{impersonales-2-f}
-        pro.3s Parece que va a venir a la fiesta.
+        pro.$_{3s}$ Parece que va a venir a la fiesta.
         
         \ex\label{impersonales-2-g}
-        pro.3s Se come bien en este pueblo.
+        pro.$_{3s}$ Se come bien en este pueblo.
         
         \ex\label{impersonales-2-h}
-        pro.3s Se hablo de la nueva propuesta.
+        pro.$_{3s}$ Se habló de la nueva propuesta.
         
     \end{xlist} % end first embedding
 \end{exe}
@@ -1034,4 +1034,164 @@ La técnica para representar cualquier oración es la siguiente:
 2. representar la estructura interna del sujeto (N o FN) y representar la estructura interna del predicado (V o FV)
 3. unir el sujeto con el predicado con una O.
 
-## 
+## Práctica con diferentes oraciones
+
+### Oración 1
+
+**Tú fuiste a Chicago anoche**
+
+Preguntas:
+
+a. ¿Cuál es el sujeto?
+    - ¿Qué tipo de sujeto es?
+b. ¿Cuál es el predicado (verbo + objetos directo e indirecto y otros modificadores)?
+    - ¿Qué tipo de verbo es?
+    - ¿Tiene el verbo complementos? ¿Qué tipo?
+    - ¿Hay modificadores? ¿Qué tipo?
+c. ¿Hay algún tipo de ambigüedad?
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{oracion-simple-1}
+    Tú fuiste a Chicago anoche
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{oracion-simple-1-a}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [O [N [Tú]][FV [FV [V [fuiste]][FP [P [a]][N [Chicago]]]][Adv [anoche]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+### Oración 2
+
+**El conejo brinca**
+
+Preguntas:
+
+a. ¿Cuál es el sujeto?
+    - ¿Qué tipo de sujeto es?
+b. ¿Cuál es el predicado (verbo + objetos directo e indirecto y otros modificadores)?
+    - ¿Qué tipo de verbo es?
+    - ¿Tiene el verbo complementos? ¿Qué tipo?
+    - ¿Hay modificadores? ¿Qué tipo?
+c. ¿Hay algún tipo de ambigüedad?
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{oracion-simple-2}
+    El conejo brinca
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{oracion-simple-2-a}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [O [FN [D [El]][N [conejo]]][V [brinca]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+### Oración 3
+
+**Elvis Presley vive**
+
+Preguntas:
+
+a. ¿Cuál es el sujeto?
+    - ¿Qué tipo de sujeto es?
+b. ¿Cuál es el predicado (verbo + objetos directo e indirecto y otros modificadores)?
+    - ¿Qué tipo de verbo es?
+    - ¿Tiene el verbo complementos? ¿Qué tipo?
+    - ¿Hay modificadores? ¿Qué tipo?
+c. ¿Hay algún tipo de ambigüedad?
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{oracion-simple-3}
+    Elvis Presley vive
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{oracion-simple-3-a}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [O [N [Elvis Presley]][V [vive]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+### Oración 4
+
+**Hablé con mis amigos ayer**
+
+Preguntas:
+
+a. ¿Cuál es el sujeto?
+    - ¿Qué tipo de sujeto es?
+b. ¿Cuál es el predicado (verbo + objetos directo e indirecto y otros modificadores)?
+    - ¿Qué tipo de verbo es?
+    - ¿Tiene el verbo complementos? ¿Qué tipo?
+    - ¿Hay modificadores? ¿Qué tipo?
+c. ¿Hay algún tipo de ambigüedad?
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{oracion-simple-4}
+    Hablé con mis amigos ayer
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{oracion-simple-4-a}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [O [N [pro$_{1s}$]][FV [FV [V [hablé]][FP [P [con]][FN [D [mis]][N [amigos]]]]][FAdv [ayer]]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
+
+### Oración 5
+
+**Llegamos**
+
+Preguntas:
+
+a. ¿Cuál es el sujeto?
+    - ¿Qué tipo de sujeto es?
+b. ¿Cuál es el predicado (verbo + objetos directo e indirecto y otros modificadores)?
+    - ¿Qué tipo de verbo es?
+    - ¿Tiene el verbo complementos? ¿Qué tipo?
+    - ¿Hay modificadores? ¿Qué tipo?
+c. ¿Hay algún tipo de ambigüedad?
+
+```{=tex}
+
+\begin{exe} %first level (1)
+    \ex\label{oracion-simple-5}
+    Llegamos
+    \begin{xlist} %second level (1.a) 
+        
+            \ex\label{oracion-simple-5-a}
+            \begin{forest}
+            where n children=0{tier=word}{}
+            [O [N [pro$_{1p}$]][V [llegamos]]]
+            \end{forest}
+            
+    \end{xlist} % end first embedding
+\end{exe}
+            
+```
