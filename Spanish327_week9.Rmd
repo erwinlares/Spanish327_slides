@@ -1,0 +1,97 @@
+---
+title: "Láminas para Español 327"
+subtitle: "Semester de otoño<br/>2021"
+author: "Erwin Lares"
+institute: "Departmen of Spanish & Portuguese <br/>UW-Madison"
+date: "2021/08/30 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, default, middlebury-fonts]
+    lib_dir: libs
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      countdown: 60000
+---
+
+```{r setup, include=FALSE, echo = FALSE, message=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3,
+                      fig.width = 7,
+                      fig.height = 5, 
+                      echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      include = TRUE)
+
+library(tidyverse)
+library(skimr)
+library(knitr)
+library(xaringanBuilder)
+library(googledrive)
+
+```
+name: agenda
+#### Viernes 4 de noviembre de 2021 
+### Semana 5
+
+Carpintería administrativa
+
+- examen parcial 2
+- asistencia y participación
+- nueva unidad
+
+---
+#### Viernes 4 de noviembre de 2021 
+### Semana 5 
+
+- La semántica
+    - significado de las palabras, de las frases y de las oraciones. 
+- La pragmática
+    - el significado tomando en cuenta el contexto discursivo y la situación del acto de comunicación (~speech act).
+    
+---
+#### Viernes 4 de noviembre de 2021 
+### Semana 5 
+
+#¿Significado?
+
+Hemos estado hablado de significado en sintaxis, entonces ¿por qué presentar una rama enteramente nueva de lingüística, no es suficiente la sintaxis?
+
+##Práctica##
+¿Pueden pensar en una situación dónde lo que se transmite no está relacionado con lo que se dice?
+
+Término: homomorfismo
+
+---
+#### Viernes 4 de noviembre de 2021 
+### Semana 5 
+
+¿Hay varios tipos de significado?
+
+Ya habíamos hablado de _langue_ vs _parole_. El signo lingüístico _significado_ y _significante_. Vamos a refinar un poco la idea de qué constituye el significado
+
+Hualde nos presenta con dos aproximaciones al significado
+
+- significado referencial
+- sentido
+- deixis 
+- abstracción & conceptualización
+
+
+<!-- Run this to upload this to GoogleDrive -->
+```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
+
+#build_pdf("spanish327_slides.html", complex_slides = TRUE)
+# If you want to build a new slide for each increment on incremental slides, set partial_slides = TRUE.
+#this method work, but plots will not render 
+#Docker HAS TO BE RUNNING FOR THIS TO WORKx
+
+pagedown::chrome_print("Spanish327_week9.html", output = "week9_327.pdf")
+slides <- drive_put("week9_327.pdf", path = "Fall_2021/week9_327.pdf")
+slides <- slides %>%
+   drive_share(role = "reader", type = "anyone")
+
+```
