@@ -39,6 +39,7 @@ name: agenda
 
 ```{r}
 include_graphics("images/IMG_5493.JPG")
+
 ```
 ---
 #### De lunes 8 a viernes 12 de noviembre de 2021 
@@ -136,14 +137,111 @@ Hay básicamente tres tipos de antonimia
 
 # Relaciones semánticas: hiponimia
 
-> La **hiponimia** es una relación que se da entre palabras cuando el significado de una se incluye en el significado de la otra. 
-
 ```{r}
 include_graphics("images/tree.png")
 
 ```
 
 ---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Relaciones semánticas: práctica
+
+```{r}
+include_graphics("images/Screen Shot 2021-11-10 at , Nov 10, 2021, 8.53.12 AM.png")
+
+```
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Relaciones semánticas: práctica
+
+Para los siguientes pares de palabras, indica si comparten una relación de hiponimia. Si es así, explicita cuál es el hipónimo.
+
+    1. olor - aroma
+    1. mes - enero
+    1. príncipe - princesa
+    1. cabaña - casa
+    1. caballo - rocín
+    1. nariz - cara
+    1. pariente - tía
+    1. bicicleta - moto
+    1. grande - gigantesco
+    1. estación - primavera
+    1. anillo - joyas
+    1. carmín - rojo
+    1 homófono - homónino
+
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Relaciones semánticas: práctica
+
+Indica si las siguientes palabras son homóninas o polisémicas
+
+1. fiesta: una celebración - un día festivo
+1. cita: acuerdo para una reunión - un texto que se menciona
+1. saber: tener cierto sabor - tener conocimiento de algo 
+1. papeles: hojas para escribir - documentos importantes 
+1. prometido: novio - el participio de prometer
+1. rico: con mucho dinero - una comida deliciosa
+1. regar: esparcir agua sobre algo - derramar algun líquido
+1. cara: una parte del cuerpo - un precio alto
+1. cerca: a poca distancia - una construcción que forma una barrera
+
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Relaciones semánticas: práctica
+
+Poner es una palabra polisémica. En las siguientes oraciones puede significar: colocar, nombrar, volver, agregar, presentar, vestir con, contribuir, situar, cocinar, instalar, mandar, suponer
+
+.pull-left[
+- Voy a poner el arroz para que comamos en media hora
+- Al niño, le pusieron un disfraz de payaso
+- Ponle un poquito de azúcar, que está simple
+- Todavía no hemos puesto Internet en la casa
+- ¿Qué vamos a poner en la tele esta noche?
+
+]
+.pull-right[
+- Se puso furiosa cuando le di la noticia
+- Le puse un email anoche
+- Cada uno puso $50 para comprar el regalo
+- Al niño le pusieron Miguel
+- Pongamos que mi papá nos presta el carro
+- Se puso en el pleno centro del salón
+]
+
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Relaciones semánticas: práctica
+
+Los diccionarios distinguen entre la polisemia y la homonimia
+en la presentación de las definiciones: los homónimos ocurren como
+entradas diferentes, generalmente con superíndices, y las palabras
+polisémicas ocurren con significados diferentes dentro de la misma entrada.
+A continuación hay algunas definiciones del Diccionario de la Lengua
+Española de la Real Academia Española (dle.rae.es). En el primer ejemplo,
+corto es un homónimo con dos significados, el primero de los cuales (corto1)
+es polisémico, con cuatro significados relacionados.
+Revise las definiciones de corto, plata y piso presentadas a continuación
+y considere hasta qué punto las decisiones de la RAE en cuanto a la
+homonimia o polisemia son discutibles.
+
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Relaciones semánticas: práctica
+
+
 
 <!-- Run this to upload this to GoogleDrive -->
 
