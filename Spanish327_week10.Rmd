@@ -223,7 +223,7 @@ Poner es una palabra polisémica. En las siguientes oraciones puede significar: 
 
 # Relaciones semánticas: práctica
 
-Los diccionarios distinguen entre la polisemia y la homonimia
+>Los diccionarios distinguen entre la polisemia y la homonimia
 en la presentación de las definiciones: los homónimos ocurren como
 entradas diferentes, generalmente con superíndices, y las palabras
 polisémicas ocurren con significados diferentes dentro de la misma entrada.
@@ -235,13 +235,129 @@ Revise las definiciones de corto, plata y piso presentadas a continuación
 y considere hasta qué punto las decisiones de la RAE en cuanto a la
 homonimia o polisemia son discutibles.
 
+Revisemos **corto**, **piso** y **plata**. ¿Qué nos dice el diccionario?
 ---
 #### De lunes 8 a viernes 12 de noviembre de 2021 
 ### Semana 10
 
-# Relaciones semánticas: práctica
+# Roles semánticos
+
+Los roles o papeles semánticos es una manera de explicar porque la estructura sintáctica de una oración no siempre corresponde con el significado. 
+
+**Terminología** Un caso como el descrito en la oración anterior seria un ejemplo de falta de ...
+
+--> 
+
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Roles semánticos
+
+Las siguientes dos oraciones contienen las misma palabras, pero tienen significados muy diferentes.
+
+(1) a. El policía persiguió al ladrón  
+    b. El ladrón persiguió al policía
+    
+### ¿Cómo podemos decidir quién persiguió a quién?
+
+Sintácticamente, podemos identificar el OD por la presencia de _a personal_. Adicionalmente podemos anteponer el OD y esto necesita la reduplicación con el clítico _lo_.
+
+(2) a. Al ladrón, lo persiguió el policia.  
+    b. Al policía, lo persiguió el ladrón.
+    
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Roles semánticos
+
+Sin embargo, la sintaxis no siempre nos ayuda con el significado, por ejemplo ...
+
+(3) a. Juan abrió la puerta con la llave.  
+    b. La llave abrió la puerta.  
+    c. La puerta fue abierta.  
+    
+El sujeto es Juan en (3a), la llave en (3b), y la puerta en (3c).
+La puerta es el OD en (3a) y (3b), pero el sujeto en (3c)
+
+Pero es técnicamente el mismo evento...
+
+¿Tenemos una manera de dar cuenta de estos hechos?
+
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+# Roles semánticos
+
+Abstracción: considerar el *rol semántico* que estos participantes tienen en el evento. 
+
+Vamos a considerar los siguiente casos:
+
+1. Agente  
+2. Paciente
+3. Instrumento y causa
+4. Recipiente y beneficiario
+5. Locativo y temporal 
+
+---
+```{r}
+include_graphics("images/Screen Shot 2021-11-11 at , Nov 11, 2021, 5.12.36 PM.png")
+
+```
+
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+## Agente:
+
+> Iniciador de la acción expresada por el verbo. Típicamente actúa por su propia voluntad y controla el evento. Suele ser animado. 
+
+a. $\underline{Juan}$ abrió la puerta.  
+b. $\underline{Fernando}$ besó a Marta.  
+c. $\underline{El \space perro}$ mordió al gato.  
+d. $\underline{Ese \space caballo}$ corre muy rápido.  
+e. El libro fue escrito por $\underline{Gabriel \space García \space Márquez}$
 
 
+Preguntas ...
+- ¿Cuál es la posición sintáctica más común para un paciente?
+- ¿Es la única?
+- ¿Qué ocurre con verbos intransitivos?
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+## Paciente:
+
+> El paciente es el ente que es afectado por la acción o evento expresado en el
+verbo, y experimenta algún cambio externo, visible a los demás.
+
+a. $\underline{Juan}$ abrió la puerta.  
+b. $\underline{Fernando}$ besó a Marta.  
+c. $\underline{El \space perro}$ mordió al gato.  
+d. $\underline{Ese \space caballo}$ corre muy rápido.  
+e. El libro fue escrito por $\underline{Gabriel \space García \space Márquez}$
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+## Paciente
+
+En cuanto a la sintáxis ...
+
+- El paciente se asocia comúnmente con el objeto directo.
+- En el caso de la voz pasiva ...¿qué ocurre?
+
+## Verbos intransitivos 
+
+a. $\underline{Las \space empanadas}$ se vendieron.  
+b. Se confisco $\underline{el \space libro}$.    
+c. Se canceló $\underline{la \space fiesta}$.   
+d. $\underline{La \space niña}$ nació a las tres de la madrugada.  
+e. $\underline{El \space perro}$ murió de viejo.  
 
 <!-- Run this to upload this to GoogleDrive -->
 

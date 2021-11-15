@@ -1,0 +1,231 @@
+---
+title: "Láminas para Español 327"
+subtitle: "Semester de otoño<br/>2021"
+author: "Erwin Lares"
+institute: "Departmen of Spanish & Portuguese <br/>UW-Madison"
+date: "2021/08/30 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, default, middlebury-fonts]
+    lib_dir: libs
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      countdown: 60000
+---
+
+```{r setup, include=FALSE, echo = FALSE, message=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3,
+                      fig.width = 7,
+                      fig.height = 5, 
+                      echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      include = TRUE)
+
+library(tidyverse)
+library(skimr)
+library(knitr)
+library(xaringanBuilder)
+library(googledrive)
+
+```
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+# Roles semánticos
+
+Los roles o papeles semánticos es una manera de explicar porque la estructura sintáctica de una oración no siempre corresponde con el significado. 
+
+**Terminología** Un caso como el descrito en la oración anterior seria un ejemplo de falta de ...
+
+--> 
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+# Roles semánticos
+
+Las siguientes dos oraciones contienen las misma palabras, pero tienen significados muy diferentes.
+
+(1) a. El policía persiguió al ladrón  
+    b. El ladrón persiguió al policía
+    
+### ¿Cómo podemos decidir quién persiguió a quién?
+
+Sintácticamente, podemos identificar el OD por la presencia de _a personal_. Adicionalmente podemos anteponer el OD y esto necesita la reduplicación con el clítico _lo_.
+
+(2) a. Al ladrón, lo persiguió el policia.  
+    b. Al policía, lo persiguió el ladrón.
+    
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+# Roles semánticos
+
+Sin embargo, la sintaxis no siempre nos ayuda con el significado, por ejemplo ...
+
+(3) a. Juan abrió la puerta con la llave.  
+    b. La llave abrió la puerta.  
+    c. La puerta fue abierta.  
+    
+El sujeto es Juan en (3a), la llave en (3b), y la puerta en (3c).
+La puerta es el OD en (3a) y (3b), pero el sujeto en (3c)
+
+Pero es técnicamente el mismo evento...
+
+¿Tenemos una manera de dar cuenta de estos hechos?
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+# Roles semánticos
+
+Abstracción: considerar el *rol semántico* que estos participantes tienen en el evento. 
+
+Vamos a considerar los siguiente casos:
+
+1. Agente  
+1. Paciente
+1. Experimentante
+1. Instrumento y causa
+1. Recipiente y beneficiario
+1. Locativo y temporal 
+
+---
+```{r}
+include_graphics("images/Screen Shot 2021-11-11 at , Nov 11, 2021, 5.12.36 PM.png")
+
+```
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Agente:
+
+> Iniciador de la acción expresada por el verbo. Típicamente actúa por su propia voluntad y controla el evento. Suele ser animado. 
+
+a. $\underline{Juan}$ abrió la puerta.  
+b. $\underline{Fernando}$ besó a Marta.  
+c. $\underline{El \space perro}$ mordió al gato.  
+d. $\underline{Ese \space caballo}$ corre muy rápido.  
+e. El libro fue escrito por $\underline{Gabriel \space García \space Márquez}$
+
+
+Preguntas ...
+- ¿Cuál es la posición sintáctica más común para un paciente?
+- ¿Es la única?
+- ¿Qué ocurre con verbos intransitivos?
+---
+#### De lunes 8 a viernes 12 de noviembre de 2021 
+### Semana 10
+
+## Paciente:
+
+> El paciente es el ente que es afectado por la acción o evento expresado en el
+verbo, y experimenta algún cambio externo, visible a los demás.
+
+a. $\underline{Juan}$ abrió la puerta.  
+b. $\underline{Fernando}$ besó a Marta.  
+c. $\underline{El \space perro}$ mordió al gato.  
+d. $\underline{Ese \space caballo}$ corre muy rápido.  
+e. El libro fue escrito por $\underline{Gabriel \space García \space Márquez}$
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Paciente
+
+En cuanto a la sintáxis ...
+
+- El paciente se asocia comúnmente con el objeto directo.
+- En el caso de la voz pasiva ...¿qué ocurre?
+
+## Verbos intransitivos 
+
+1. $\underline{Las \space empanadas}$ se vendieron.  
+1. Se confisco $\underline{el \space libro}$.    
+1. Se canceló $\underline{la \space fiesta}$.   
+1. $\underline{La \space niña}$ nació a las tres de la madrugada.  
+1. $\underline{El \space perro}$ murió de viejo.  
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Experimentante
+
+> El **experimentante** experimenta una sensación física o mental, o recibe una impresión sensorial. Es diferente del agente en que no actúa por su propia voluntad ni controla el evento. A diferencia del paciente, no experimental ningún visible a los demás porque estos verbos expresan sensaciones internas. 
+
+### Ejemplos como sujeto en verbos de percepción
+
+1. $\underline{María}$ vio las bicicletas.  
+1. $\underline{Los \space muchachos}$ tienen hambre.    
+1. $\underline{Roberto}$ piensa que la sintaxis es muy difícil.   
+1. $\underline{Elisa}$ conoce a Carla.  
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Experimentante
+
+### Ejemplos con verbos de reacciones emotivas
+
+1. $\underline{María}$ se asustó con el ruido.
+1. $\underline{María}$ se conmovio con al escuchar la música.
+1. El ruido asustó $\underline{a \space María}$
+1. El recital de poesía conmovió $\underline{a \space María}$
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Experimentante
+
+### Ejemplos con verbos como gustar
+
+1. $\underline{A \space María}$ le gusta el chocolate.
+1. $\underline{A \space Juan}$ le molesta el viento en la cara.
+1. $\underline{María}$ adora el chocolate.
+1. $\underline{Juan}$ detesta el viento en la cara.
+
+### Moraleja 1:
+El experimentante puede ocurrir como sujeto, objeto directo y objeto indirecto según el significado del verbo, y según la estructura sintáctica de la oración (con o sin se). La similitud en significado entre las oraciones, a pesar de las diferencias sintácticas, se debe al hecho de que los participantes desempeñan los mismos roles semánticos.
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Moraleja 2
+
+Acerca de los roles de agente, paciente y experimentante: el agente inicia la acción, actuando por su propia voluntad; el paciente es afectado por la acción, y sufre algún cambio; y el experimentante también es afectado por el evento, pero el efecto es interno
+ya que experimenta una sensación física o mental.
+
+
+<!-- Run this to upload this to GoogleDrive -->
+
+
+
+```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
+
+#build_pdf("spanish327_slides.html", complex_slides = TRUE)
+# If you want to build a new slide for each increment on incremental slides, set partial_slides = TRUE.
+#this method work, but plots will not render 
+#Docker HAS TO BE RUNNING FOR THIS TO WORK <- I DON'T THINK THIS IS TRUE!
+
+pagedown::chrome_print("Spanish327_week11.html", output = "week11_327.pdf")
+slides <- drive_put("week11_327.pdf", path = "Fall_2021/week11_327.pdf")
+slides <- slides %>%
+   drive_share(role = "reader", type = "anyone")
+
+```
