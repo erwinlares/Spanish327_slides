@@ -199,7 +199,11 @@ En cuanto a la sintáxis ...
 1. $\underline{María}$ adora el chocolate.
 1. $\underline{Juan}$ detesta el viento en la cara.
 
-### Moraleja 1:
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Moraleja 1:
 El experimentante puede ocurrir como sujeto, objeto directo y objeto indirecto según el significado del verbo, y según la estructura sintáctica de la oración (con o sin se). La similitud en significado entre las oraciones, a pesar de las diferencias sintácticas, se debe al hecho de que los participantes desempeñan los mismos roles semánticos.
 
 ---
@@ -211,6 +215,141 @@ El experimentante puede ocurrir como sujeto, objeto directo y objeto indirecto s
 Acerca de los roles de agente, paciente y experimentante: el agente inicia la acción, actuando por su propia voluntad; el paciente es afectado por la acción, y sufre algún cambio; y el experimentante también es afectado por el evento, pero el efecto es interno
 ya que experimenta una sensación física o mental.
 
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Mojándonos los dedos del pie en pragmática
+
+1. Oraciones vs enunciados
+1. El principio de cooperación y las máximas de Grice 
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Oraciones vs enunciados
+
+> Una **oración** es una unidad gramatical que consiste de un sujeto y un predicado.Las oraciones, a grandes trazos, se clasifican en declarativas, interrogativas, e imperativas.
+
+> Un **enunciado** es una unidad comunicativa que constitute una contribución a la interacción. No es necesariamente una oración per se, puede ser simpremente una frase, o una simple una interjeción. La taxonomia ofrecida arriba para las oraciones no se traduce 1:1 a los enunciados
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Oraciones vs enunciados
+
+Los tres enunciados implican la misma contribución a esta situación hipotética, aunque están formados por tres tipos de oraciones distintas explicadas en la lámina anterior.
+
+    a. Hace frío aqui.
+    b. ¿Puedes cerrar la ventana?
+    c. ¡Cierra la ventana!
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## El principio de cooperación de Grice.
+
+Un enunciado puede ejecutar varios actos de habla según el contexto en que ocurra, y, comúnmente, el hablante no hace explícito lo que quiere comunicar. A pesar de eso, la gran mayoría de la comunicación se lleva a cabo éxitosamente con un mínimo de malentendidos.
+
+De acuerdo a Grice, los interlocutores cuando deciden conversar siguen una serie de reglas que promueven el diálogo donde cada interlocutor ...
+
+>aporta su contribución a la conversación, en el momento en que ocurre, tal como la requieren el propósito y la dirección del intercambio en el que participe.
+
+Las reglas que gobiernan esta interacción se llamán _Las máximas de Grice_
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Las cuatro máximas de Grice
+
+# Máxima de cantidad
+
+- proporcione tanta información como sea requerida  
+- no proporcione más información de la que sea requerida  
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Las cuatro máximas de Grice
+
+# Máxima de calidad
+
+- no afirme lo que crea falso  
+- no afirme algo de lo que no tenga prueba  
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Las cuatro máximas de Grice
+
+# Máxima de relación
+
+-  sea pertinente  
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Las cuatro máximas de Grice
+
+# Máxima de manera
+
+- sea claro
+    - evite la oscuridad de expresión  
+    - evite las ambigüedades  
+    - sea breve  
+    - sea ordenado  
+    
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## ¿Por qué son interesantes las máximas del principio de cooperación?
+
+Lo importante de estas máximas para el estudio de la comunicación es que producen inferencias no explícitas en el contenido semántico de los enunciados. Estas inferencias, conocidas como implicaturas conversacionales, se basan en lo que se ha dicho, lo que no se ha dicho y lo que se supone sobre la naturaleza cooperativa de la conversación.
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## ¿Por qué son interesantes las máximas del principio de cooperación?
+
+### Pablo: —¿Dónde está Miriam?
+### María: —Hay una bicicleta afuera de la casa de Enrique.
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## ¿Por qué son interesantes las máximas del principio de cooperación?
+
+###Pablo: —La casa está muy sucia.
+###María: —Tengo un examen mañana.
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## ¿Por qué son interesantes las máximas del principio de cooperación?
+
+### Pablo: —¿Es Ricardo un buen alumno?
+### María: —Siempre asiste a clase.
+
+---
+#### De lunes 15 a viernes 19 de noviembre de 2021 
+### Semana 11
+
+## Entailments, implicatures, presuppositions
+
+### - "Mary had a baby" & "Mary got married"
+### - "The president was assasinated" & "The president is dead"
+### - "The king of France is bald" & "There is a king of France"
 
 <!-- Run this to upload this to GoogleDrive -->
 
