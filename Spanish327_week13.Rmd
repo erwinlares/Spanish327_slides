@@ -1,0 +1,168 @@
+---
+title: "Láminas para Español 327"
+subtitle: "Semester de otoño<br/>2021"
+author: "Erwin Lares"
+institute: "Departmen of Spanish & Portuguese <br/>UW-Madison"
+date: "2021/08/30 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, default, middlebury-fonts]
+    lib_dir: libs
+    seal: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      countdown: 60000
+---
+
+```{r setup, include=FALSE, echo = FALSE, message=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3,
+                      fig.width = 7,
+                      fig.height = 5, 
+                      echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      include = TRUE)
+
+library(tidyverse)
+library(skimr)
+library(knitr)
+library(xaringanBuilder)
+library(googledrive)
+
+```
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Carpintería administrativa
+
+    - Los exámenes estarán listos el viernes
+    - Esta es la última unidad. Si hay detalles, avísenme a la brevedad posible
+    - Grupo 6 - debemos hablar de su presentación
+    - ¿Preguntas?
+
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## 1. ¿Qué vocabulario conoces “típico” de Wisconsin (o de otro estado que conozcas)?
+## 2.¿Qué pronunciaciones conoces “típicas” de Wisconsin (o de otro estado que conozcas)?
+## 3.¿Cómo defines el concepto de dialecto? ¿Cómo se diferencian los conceptos de dialectoy lengua?
+## 4. Terminología: variedad vs dialecto.
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Tipos de variación
+
+```{r}
+include_graphics("images/variacion.png")
+```
+
+
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Activividades de variación diatópica
+
+- New York Times quiz
+- Dictionary of American Regional English 
+
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Actividades de variación diastrática 
+
+ - ¿Cuáles son las diferencias socio-dialectables más comunes?
+ - Registro
+
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Actividades de variación diastrática 
+
+- ¿Qué palabras o pronunciaciones asocias con ...
+1. personas de la edad de tus abuelos (65+ años de edad)
+2. personas de sexo femenino vs palabras que típicamente asocias con el habla "masculina"
+
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Actividades de variación diastrática 
+
+- ¿Cómo le preguntarías 
+
+1. a un amigo si sabe qué día es el examen final para la clase?
+2. a un profesor si sabe qué día es el examen final para la clase?
+
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Actividades de variación diacrónica
+
+- ¿Podemos decir que un dialecto comienza o acaba en un determinado lugar en el tiempo o en el espacio?
+
+- ¿A qué haría referencia la norma prescriptiva? ¿Qué norma estudia el lingüista: la norma prescriptiva o la norma descriptiva? ¿Cuál sería la diferencia?
+
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Terminología
+
+    - Acrolecto
+    - Mesolecto
+    - Basolecto
+    
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Principales zonas dialectales del español peninsular 
+
+```{r}
+include_graphics("images/mapa_espana.png")
+```
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Principales zonas dialectales del español peninsular 
+
+### Datos y hechos de interés
+
+- Los orígenes del español moderno se centran en Burgos alrededor del siglo XIII-XIV
+- La variedad andaluza tomó forma en los siglos XIII-XVI
+- La variedad canaria que se observa en las islas Canarias alrededor del siglo XIII 
+- En 1492, los judíos español fueron expulsados de la península y con su diáspora hand mantenido el español ladino, juedoespañol o español sefardí.
+ 
+---
+#### De lunes 29 de noviembre a viernes 3 de diciembre de 2021 
+### Variación lingüística en el español
+
+## Principales zonas dialectales del español peninsular 
+
+### Datos y hechos de interés
+ 
+ 
+
+```{r upload-slides-to-goggle-drive, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE, eval=FALSE}
+
+#build_pdf("spanish327_slides.html", complex_slides = TRUE)
+# If you want to build a new slide for each increment on incremental slides, set partial_slides = TRUE.
+#this method work, but plots will not render 
+#Docker HAS TO BE RUNNING FOR THIS TO WORK <- I DON'T THINK THIS IS TRUE!
+
+pagedown::chrome_print("Spanish327_week13.html", output = "week13_327.pdf")
+slides <- drive_put("week13_327.pdf", path = "Fall_2021/week13_327.pdf")
+slides <- slides %>%
+   drive_share(role = "reader", type = "anyone")
+
+```
